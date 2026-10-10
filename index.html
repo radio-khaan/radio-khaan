@@ -1,3 +1,5 @@
+
+```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
@@ -5,329 +7,418 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>radio-khaan</title>
+<title>radio-khaan | رادیو خان</title>
 
 <style>
-
-body{
-background:#050505;
-color:white;
-font-family:tahoma,Arial;
-margin:0;
-text-align:center;
+* {
+  box-sizing: border-box;
 }
 
-h1{
-color:#e60000;
-font-size:42px;
-margin-top:25px;
+html {
+  scroll-behavior: smooth;
 }
 
-h2{
-color:#e60000;
+body {
+  background: #050505;
+  color: white;
+  font-family: Tahoma, Arial, sans-serif;
+  margin: 0;
+  text-align: center;
+  line-height: 1.9;
 }
 
-.container{
-width:90%;
-max-width:1000px;
-margin:auto;
+h1 {
+  color: #e60000;
+  font-size: clamp(30px, 5vw, 42px);
+  margin-top: 25px;
 }
 
-.banner img{
-width:100%;
-border-radius:15px;
-margin:20px 0;
+h2 {
+  color: #e60000;
+  margin-top: 0;
 }
 
-.box{
-background:#111;
-border:1px solid #e60000;
-border-radius:15px;
-padding:20px;
-margin:25px auto;
+.container {
+  width: 92%;
+  max-width: 1100px;
+  margin: auto;
 }
 
-.box img{
-width:100%;
-border-radius:12px;
+.banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin: 20px 0;
 }
 
-.brands p{
-font-size:20px;
-color:white;
+.box {
+  background: #111;
+  border: 1px solid #e60000;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 25px auto;
+  scroll-margin-top: 15px;
 }
 
-.products{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
+.box > img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  max-height: 420px;
+  object-fit: contain;
+  background: #080808;
+  border-radius: 12px;
+  margin: 15px auto;
 }
 
-.card{
-background:#111;
-border:1px solid #e60000;
-border-radius:15px;
-width:250px;
-padding:15px;
-cursor:pointer;
+.brands p {
+  font-size: 20px;
+  color: white;
 }
 
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:10px;
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  margin: 20px 0 35px;
 }
 
-.card:hover{
-transform:scale(1.03);
+.card {
+  display: block;
+  background: #111;
+  border: 1px solid #e60000;
+  border-radius: 15px;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s, border-color 0.2s;
+  min-width: 0;
 }
 
-.button{
-display:inline-block;
-background:#e60000;
-color:white;
-padding:12px 25px;
-border-radius:10px;
-margin:10px;
-text-decoration:none;
+.card img {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  background: #080808;
+  border-radius: 10px;
 }
 
+.card p {
+  margin: 10px 0 2px;
+  font-size: 16px;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: white;
+}
+
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.product-item {
+  background: #080808;
+  border: 1px solid #292929;
+  border-radius: 12px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.product-item img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #050505;
+}
+
+.product-item p {
+  margin: 8px 0 0;
+}
+
+.button {
+  display: inline-block;
+  background: #e60000;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  margin: 10px 5px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: #b90000;
+}
+
+footer {
+  color: #aaa;
+  padding: 15px;
+  font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 94%;
+  }
+
+  .box {
+    padding: 14px;
+    margin: 18px auto;
+  }
+
+  .products,
+  .product-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .card {
+    padding: 8px;
+  }
+
+  .card img {
+    height: 145px;
+  }
+
+  .product-item {
+    padding: 7px;
+  }
+
+  .product-item img {
+    height: 160px;
+  }
+
+  .button {
+    padding: 10px 16px;
+  }
+}
 </style>
-
 </head>
 
 <body>
-
-
 <div class="container">
-
 
 <h1>radio-khaan</h1>
 
-
 <div class="banner">
-<img src="banner.png">
+  <img src="banner.png" alt="بنر فروشگاه رادیو خان">
 </div>
-
-
 
 <div class="box">
-
-<h2>درباره فروشگاه</h2>
-
-<p>
-رادیو خان ارائه دهنده سیستم های صوتی و تصویری خودرو،
-مانیتور اندروید، پخش خودرو، آمپلی فایر، ساب ووفر و تجهیزات حرفه ای صوتی خودرو می باشد.
-ما با ارائه محصولات با کیفیت و خدمات تخصصی همراه شما هستیم.
-</p>
-
+  <h2>درباره فروشگاه</h2>
+  <p>
+    رادیو خان ارائه دهنده سیستم های صوتی و تصویری خودرو،
+    مانیتور اندروید، پخش خودرو، آمپلی فایر، ساب ووفر و تجهیزات حرفه ای صوتی خودرو می باشد.
+    ما با ارائه محصولات با کیفیت و خدمات تخصصی همراه شما هستیم.
+  </p>
 </div>
-
-
 
 <div class="box">
-
-<h2>فروشگاه ما</h2>
-
-<img src="shop-photo.jpg">
-
-<p>
-آذربایجان شرقی - تبریز - قطران - تقاطع ۱۷ شهریور
-</p>
-
+  <h2>فروشگاه ما</h2>
+  <img src="shop-photo.jpg" alt="فروشگاه رادیو خان">
+  <p>آذربایجان شرقی - تبریز - قطران - تقاطع ۱۷ شهریور</p>
 </div>
-
-
 
 <div class="box brands">
-
-<h2>نمایندگی برندها</h2>
-
-<p>TT TECHNOLOGY</p>
-
-<p>WARR SOUND</p>
-
-<p>SPEADWARD</p>
-
+  <h2>نمایندگی برندها</h2>
+  <p>TT TECHNOLOGY</p>
+  <p>WARR SOUND</p>
+  <p>SPEADWARD</p>
 </div>
+
 <h2>محصولات</h2>
 
 <div class="products">
 
+  <a href="#monitor" class="card">
+    <img src="monitor-1.jpg" alt="مانیتور خودرو">
+    <p>مانیتور خودرو</p>
+  </a>
 
-<a href="#monitor" class="card">
+  <a href="#player" class="card">
+    <img src="player-1.jpg" alt="پخش خودرو">
+    <p>پخش خودرو</p>
+  </a>
 
-<img src="monitor-1.jpg">
+  <a href="#subwoofer" class="card">
+    <img src="subwoofer-1.jpg" alt="ساب ووفر">
+    <p>ساب ووفر</p>
+  </a>
 
-<p>مانیتور خودرو</p>
+  <a href="#amplifier" class="card">
+    <img src="amplifier-1.jpg" alt="آمپلی فایر">
+    <p>آمپلی فایر</p>
+  </a>
 
-</a>
-
-
-
-<a href="#player" class="card">
-
-<img src="player-1.jpg">
-
-<p>پخش خودرو</p>
-
-</a>
-
-
-
-<a href="#subwoofer" class="card">
-
-<img src="subwoofer-1.jpg">
-
-<p>ساب ووفر</p>
-
-</a>
-
-
-
-<a href="#amplifier" class="card">
-
-<img src="amplifier-1.jpg">
-
-<p>آمپلی فایر</p>
-
-</a>
-
-
-
-<a href="#midrange" class="card">
-
-<img src="midrange-1.jpg">
-
-<p>میدرنج</p>
-
-</a>
-
+  <a href="#midrange" class="card">
+    <img src="midrange-1.jpg" alt="میدرنج">
+    <p>میدرنج</p>
+  </a>
 
 </div>
-
-
 
 <div class="box" id="monitor">
+  <h2>مانیتور خودرو</h2>
 
-<h2>مانیتور خودرو</h2>
+  <div class="product-gallery">
+    <div class="product-item">
+      <img src="monitor-1.jpg" alt="مانیتور خودرو ۱" loading="lazy">
+    </div>
+    <div class="product-item">
+      <img src="monitor-2.jpg" alt="مانیتور خودرو ۲" loading="lazy">
+    </div>
+  </div>
 
-<img src="monitor-1.jpg">
-
-<img src="monitor-2.jpg">
-
-<p>
-انواع مانیتور خودرو با کیفیت بالا
-</p>
-
+  <p>انواع مانیتور خودرو با کیفیت بالا</p>
 </div>
-
-
 
 <div class="box" id="player">
+  <h2>پخش خودرو</h2>
 
-<h2>پخش خودرو</h2>
+  <div class="product-gallery">
+    <div class="product-item">
+      <img src="player-1.jpg" alt="پخش خودرو ۱" loading="lazy">
+    </div>
+    <div class="product-item">
+      <img src="player-2.jpg" alt="پخش خودرو ۲" loading="lazy">
+    </div>
+    <div class="product-item">
+      <img src="player-3.jpg" alt="پخش خودرو ۳" loading="lazy">
+    </div>
+  </div>
 
-<img src="player-1.jpg">
-
-<img src="player-2.jpg">
-
-<img src="player-3.jpg">
-
-<p>
-انواع پخش خودرو
-</p>
-
+  <p>انواع پخش خودرو</p>
 </div>
-
-
 
 <div class="box" id="subwoofer">
+  <h2>ساب ووفر</h2>
 
-<h2>ساب ووفر</h2>
+  <div class="product-gallery">
+    <div class="product-item">
+      <img src="subwoofer-1.jpg" alt="ساب ووفر ۱" loading="lazy">
+    </div>
+    <div class="product-item">
+      <img src="subwoofer-2.jpg" alt="ساب ووفر ۲" loading="lazy">
+    </div>
+    <div class="product-item">
+      <img src="subwoofer-3.jpg" alt="ساب ووفر ۳" loading="lazy">
+    </div>
+    <div class="product-item">
+      <img src="subwoofer-4.jpg" alt="ساب ووفر ۴" loading="lazy">
+    </div>
+  </div>
 
-<img src="subwoofer-1.jpg">
-
-<img src="subwoofer-2.jpg">
-
-<img src="subwoofer-3.jpg">
-
-<img src="subwoofer-4.jpg">
-
-<p>
-انواع ساب ووفر برای سیستم صوتی خودرو
-</p>
-
+  <p>انواع ساب ووفر برای سیستم صوتی خودرو</p>
 </div>
-
-
 
 <div class="box" id="amplifier">
+  <h2>آمپلی فایر</h2>
 
-<h2>آمپلی فایر</h2>
+  <div class="product-gallery">
+    <div class="product-item">
+      <img src="amplifier-1.jpg" alt="آمپلی فایر ۱" loading="lazy">
+      <p>آمپلی فایر ۱</p>
+    </div>
+    <div class="product-item">
+      <img src="amplifier-2.jpg" alt="آمپلی فایر ۲" loading="lazy">
+      <p>آمپلی فایر ۲</p>
+    </div>
+    <div class="product-item">
+      <img src="amplifier-3.jpg" alt="آمپلی فایر ۳" loading="lazy">
+      <p>آمپلی فایر ۳</p>
+    </div>
+    <div class="product-item">
+      <img src="amplifier-4.jpg" alt="آمپلی فایر ۴" loading="lazy">
+      <p>آمپلی فایر ۴</p>
+    </div>
+    <div class="product-item">
+      <img src="amplifier-5.jpg" alt="آمپلی فایر ۵" loading="lazy">
+      <p>آمپلی فایر ۵</p>
+    </div>
+    <div class="product-item">
+      <img src="amplifier-6.jpg" alt="آمپلی فایر ۶" loading="lazy">
+      <p>آمپلی فایر ۶</p>
+    </div>
+    <div class="product-item">
+      <img src="amplifier-7.jpg" alt="آمپلی فایر ۷" loading="lazy">
+      <p>آمپلی فایر ۷</p>
+    </div>
+    <div class="product-item">
+      <img src="amplifier-8.jpg" alt="آمپلی فایر ۸" loading="lazy">
+      <p>آمپلی فایر ۸</p>
+    </div>
+    <div class="product-item">
+      <img src="amplifier-9.jpg" alt="آمپلی فایر ۹" loading="lazy">
+      <p>آمپلی فایر ۹</p>
+    </div>
+    <div class="product-item">
+      <img src="amplifier-10.jpg" alt="آمپلی فایر ۱۰" loading="lazy">
+      <p>آمپلی فایر ۱۰</p>
+    </div>
+  </div>
 
-<img src="amplifier-1.jpg">
-
-<img src="amplifier-2.jpg">
-
-<img src="amplifier-3.jpg">
-
-<p>
-آمپلی فایرهای قدرتمند خودرو
-</p>
-
+  <p>آمپلی فایرهای قدرتمند خودرو</p>
 </div>
-
-
 
 <div class="box" id="midrange">
+  <h2>میدرنج</h2>
 
-<h2>میدرنج</h2>
+  <div class="product-gallery">
+    <div class="product-item">
+      <img src="midrange-1.jpg" alt="میدرنج ۱" loading="lazy">
+      <p>میدرنج ۱</p>
+    </div>
+    <div class="product-item">
+      <img src="midrange-2.jpg" alt="میدرنج ۲" loading="lazy">
+      <p>میدرنج ۲</p>
+    </div>
+    <div class="product-item">
+      <img src="midrange-3.jpg" alt="میدرنج ۳" loading="lazy">
+      <p>میدرنج ۳</p>
+    </div>
+    <div class="product-item">
+      <img src="midrange-6.jpg" alt="میدرنج ۶" loading="lazy">
+      <p>میدرنج ۶</p>
+    </div>
+    <div class="product-item">
+      <img src="midrange-8.jpg" alt="میدرنج ۸" loading="lazy">
+      <p>میدرنج ۸</p>
+    </div>
+    <div class="product-item">
+      <img src="midrange-9.jpg" alt="میدرنج ۹" loading="lazy">
+      <p>میدرنج ۹</p>
+    </div>
+  </div>
 
-<img src="midrange-1.jpg">
-
-<img src="midrange-2.jpg">
-
-<img src="midrange-3.jpg">
-
-<p>
-سیستم صوتی و میدرنج خودرو
-</p>
-
+  <p>سیستم صوتی و میدرنج خودرو</p>
 </div>
-
-
-
 
 <div class="box">
+  <h2>ارتباط با ما</h2>
 
-<h2>ارتباط با ما</h2>
+  <a class="button" href="tel:09307974621">تماس با ما</a>
 
+  <a class="button" href="https://instagram.com/radio-khaan" target="_blank" rel="noopener noreferrer">
+    Instagram
+  </a>
 
-<a class="button" href="tel:09307974621">
-تماس با ما
-</a>
-
-
-<a class="button" href="https://instagram.com/radio-khaan">
-Instagram
-</a>
-
-
-<p>
-آدرس:
-آذربایجان شرقی - تبریز - قطران - تقاطع ۱۷ شهریور
-</p>
-
-
+  <p>آدرس: آذربایجان شرقی - تبریز - قطران - تقاطع ۱۷ شهریور</p>
 </div>
 
+<footer>
+  رادیو خان | سیستم‌های صوتی و تصویری خودرو
+</footer>
 
 </div>
-
-
 </body>
-
 </html>
+```
+  
