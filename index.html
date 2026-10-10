@@ -13,35 +13,48 @@ body{
 background:#050505;
 color:white;
 font-family:tahoma,Arial;
-text-align:center;
 margin:0;
+text-align:center;
 }
 
 h1{
-color:red;
-font-size:40px;
+color:#e60000;
+font-size:42px;
+margin-top:25px;
+}
+
+h2{
+color:#e60000;
+}
+
+.container{
+width:90%;
+max-width:1000px;
+margin:auto;
 }
 
 .banner img{
-width:90%;
-max-width:900px;
+width:100%;
 border-radius:15px;
-margin:20px;
+margin:20px 0;
 }
 
 .box{
 background:#111;
-margin:25px auto;
-padding:20px;
-width:85%;
-max-width:900px;
-border:1px solid red;
+border:1px solid #e60000;
 border-radius:15px;
+padding:20px;
+margin:25px auto;
 }
 
 .box img{
 width:100%;
-border-radius:10px;
+border-radius:12px;
+}
+
+.brands p{
+font-size:20px;
+color:white;
 }
 
 .products{
@@ -53,10 +66,11 @@ gap:20px;
 
 .card{
 background:#111;
+border:1px solid #e60000;
+border-radius:15px;
 width:250px;
 padding:15px;
-border:1px solid red;
-border-radius:15px;
+cursor:pointer;
 }
 
 .card img{
@@ -66,8 +80,17 @@ object-fit:cover;
 border-radius:10px;
 }
 
-a{
-color:red;
+.card:hover{
+transform:scale(1.03);
+}
+
+.button{
+display:inline-block;
+background:#e60000;
+color:white;
+padding:12px 25px;
+border-radius:10px;
+margin:10px;
 text-decoration:none;
 }
 
@@ -75,8 +98,10 @@ text-decoration:none;
 
 </head>
 
-
 <body>
+
+
+<div class="container">
 
 
 <h1>radio-khaan</h1>
@@ -93,9 +118,9 @@ text-decoration:none;
 <h2>درباره فروشگاه</h2>
 
 <p>
-رادیو خوان ارائه دهنده انواع سیستم های صوتی و تصویری خودرو،
-مانیتور اندروید، ضبط خودرو، آمپلی فایر و تجهیزات حرفه ای صدا می باشد.
-با ارائه محصولات با کیفیت و خدمات تخصصی در خدمت مشتریان عزیز هستیم.
+رادیو خان ارائه دهنده سیستم های صوتی و تصویری خودرو،
+مانیتور اندروید، پخش خودرو، آمپلی فایر، ساب ووفر و تجهیزات حرفه ای صوتی خودرو می باشد.
+ما با ارائه محصولات با کیفیت و خدمات تخصصی همراه شما هستیم.
 </p>
 
 </div>
@@ -109,7 +134,6 @@ text-decoration:none;
 <img src="shop-photo.jpg">
 
 <p>
-آدرس فروشگاه:
 آذربایجان شرقی - تبریز - قطران - تقاطع ۱۷ شهریور
 </p>
 
@@ -117,66 +141,160 @@ text-decoration:none;
 
 
 
-<div class="box">
+<div class="box brands">
 
 <h2>نمایندگی برندها</h2>
 
-<p>
-Pioneer</p>
+<p>TT TECHNOLOGY</p>
 
-<p>
-Kenwood
-</p>
+<p>WARR SOUND</p>
 
-<p>
-Sony</p>
-
-<p>
-JBL</p>
-
-<p>
-Wega</p>
+<p>SPEADWARD</p>
 
 </div>
-
-
-
-
 <h2>محصولات</h2>
-
 
 <div class="products">
 
 
-<div class="card">
+<a href="#monitor" class="card">
+
 <img src="monitor-1.jpg">
+
 <p>مانیتور خودرو</p>
-</div>
+
+</a>
 
 
-<div class="card">
+
+<a href="#player" class="card">
+
 <img src="player-1.jpg">
+
 <p>پخش خودرو</p>
-</div>
+
+</a>
 
 
-<div class="card">
+
+<a href="#subwoofer" class="card">
+
 <img src="subwoofer-1.jpg">
+
 <p>ساب ووفر</p>
-</div>
+
+</a>
 
 
-<div class="card">
+
+<a href="#amplifier" class="card">
+
 <img src="amplifier-1.jpg">
+
 <p>آمپلی فایر</p>
-</div>
+
+</a>
 
 
-<div class="card">
+
+<a href="#midrange" class="card">
+
 <img src="midrange-1.jpg">
+
 <p>میدرنج</p>
+
+</a>
+
+
 </div>
 
+
+
+<div class="box" id="monitor">
+
+<h2>مانیتور خودرو</h2>
+
+<img src="monitor-1.jpg">
+
+<img src="monitor-2.jpg">
+
+<p>
+انواع مانیتور خودرو با کیفیت بالا
+</p>
+
+</div>
+
+
+
+<div class="box" id="player">
+
+<h2>پخش خودرو</h2>
+
+<img src="player-1.jpg">
+
+<img src="player-2.jpg">
+
+<img src="player-3.jpg">
+
+<p>
+انواع پخش خودرو
+</p>
+
+</div>
+
+
+
+<div class="box" id="subwoofer">
+
+<h2>ساب ووفر</h2>
+
+<img src="subwoofer-1.jpg">
+
+<img src="subwoofer-2.jpg">
+
+<img src="subwoofer-3.jpg">
+
+<img src="subwoofer-4.jpg">
+
+<p>
+انواع ساب ووفر برای سیستم صوتی خودرو
+</p>
+
+</div>
+
+
+
+<div class="box" id="amplifier">
+
+<h2>آمپلی فایر</h2>
+
+<img src="amplifier-1.jpg">
+
+<img src="amplifier-2.jpg">
+
+<img src="amplifier-3.jpg">
+
+<p>
+آمپلی فایرهای قدرتمند خودرو
+</p>
+
+</div>
+
+
+
+<div class="box" id="midrange">
+
+<h2>میدرنج</h2>
+
+<img src="midrange-1.jpg">
+
+<img src="midrange-2.jpg">
+
+<img src="midrange-3.jpg">
+
+<p>
+سیستم صوتی و میدرنج خودرو
+</p>
 
 </div>
 
@@ -187,23 +305,24 @@ Wega</p>
 
 <h2>ارتباط با ما</h2>
 
-<p>
-📞 تماس:
-09307974621
-</p>
 
-
-<p>
-📍 تبریز - قطران - تقاطع ۱۷ شهریور
-</p>
-
-
-<p>
-اینستاگرام:
-<a href="#">
-radio-khaan
+<a class="button" href="tel:09307974621">
+تماس با ما
 </a>
+
+
+<a class="button" href="https://instagram.com/radio-khaan">
+Instagram
+</a>
+
+
+<p>
+آدرس:
+آذربایجان شرقی - تبریز - قطران - تقاطع ۱۷ شهریور
 </p>
+
+
+</div>
 
 
 </div>
