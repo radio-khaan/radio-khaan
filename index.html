@@ -1,36 +1,188 @@
 <!DOCTYPE html>
-<html>
+<html lang="fa" dir="rtl">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Radio Khaan</title>
+
 <style>
+
 body{
-  margin:0;
-  background:#000;
-  color:white;
-  text-align:center;
-  font-family:Arial;
+    margin:0;
+    background:#050505;
+    color:white;
+    font-family:tahoma, Arial;
+    text-align:center;
 }
 
-h1{
-  color:red;
-  font-size:45px;
-  font-style:italic;
+.header{
+    padding:30px 10px;
 }
 
-img{
-  width:100%;
-  max-width:800px;
+.logo{
+    color:red;
+    font-size:40px;
+    font-weight:bold;
+    font-style:italic;
 }
+
+.subtitle{
+    font-size:20px;
+    margin-top:15px;
+}
+
+.menu{
+    background:#111;
+    padding:15px;
+    border-top:1px solid red;
+    border-bottom:1px solid red;
+}
+
+.menu a{
+    color:white;
+    margin:10px;
+    text-decoration:none;
+}
+
+.banner{
+    width:90%;
+    max-width:900px;
+    border:2px solid red;
+    border-radius:15px;
+    margin:30px auto;
+}
+
+.section{
+    margin:40px 20px;
+    padding:25px;
+    border:1px solid #700;
+    border-radius:20px;
+}
+
+h2{
+    color:red;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card{
+    width:250px;
+    padding:25px;
+    background:#111;
+    border:1px solid red;
+    border-radius:15px;
+    font-size:22px;
+}
+
+button{
+    background:red;
+    color:white;
+    border:0;
+    padding:15px 30px;
+    border-radius:10px;
+    font-size:18px;
+}
+
 </style>
+
 </head>
 
 <body>
 
-<h1>RADIO KHAN</h1>
 
-<img src="banner.png">
+<div class="header">
 
-<p>به فروشگاه رادیو خان خوش آمدید</p>
+<div class="logo">
+RADIO KHAN
+</div>
+
+<div class="subtitle">
+فروشگاه سیستم صوتی و تصویری خودرو
+</div>
+
+</div>
+
+
+<div class="menu">
+
+<a href="#">صفحه اصلی</a>
+<a href="#">درباره ما</a>
+<a href="#">محصولات</a>
+<a href="#contact">تماس با ما</a>
+
+</div>
+
+
+
+<img class="banner" src="banner.png">
+
+
+
+<div class="section">
+
+<h2>
+محصولات ما
+</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+مانیتور و پخش
+</div>
+
+
+<div class="card">
+ساب ووفر
+</div>
+
+
+<div class="card">
+آمپلی فایر
+</div>
+
+
+<div class="card">
+سیستم صوتی
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<div class="section" id="contact">
+
+<h2>
+تماس با ما
+</h2>
+
+<p>
+شماره تماس: 09307974621
+</p>
+
+<p>
+اینستاگرام:
+@Radio_khaan
+</p>
+
+<button>
+تماس با فروشگاه
+</button>
+
+
+</div>
+
+
 
 </body>
 </html>
