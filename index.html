@@ -4,291 +4,293 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#080808">
-<meta name="description" content="RADIO KHAN | فروش تخصصی سیستم صوتی و تصویری خودرو در تبریز">
-<title>RADIO KHAN | قدرت واقعی صدا</title>
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="RADIO KHAN، فروش تخصصی سیستم صوتی و تصویری خودرو در تبریز">
+<title>RADIO KHAN | فروشگاه تخصصی صوت خودرو</title>
 
 <style>
 :root {
-  --bg: #070707;
-  --panel: #111111;
-  --panel2: #181818;
-  --red: #ed1828;
-  --red-dark: #85000c;
-  --text: #f7f7f7;
-  --muted: #a5a5a5;
-  --line: rgba(237,24,40,.32);
+  --red: #d71928;
+  --red-dark: #a90e1a;
+  --black: #171717;
+  --text: #222;
+  --muted: #737373;
+  --line: #e8e8e8;
+  --soft: #f6f6f6;
+  --white: #fff;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 85px;
+  scroll-padding-top: 90px;
 }
 
 body {
   margin: 0;
-  background:
-    radial-gradient(ellipse at 50% -10%, #351014 0, transparent 38%),
-    var(--bg);
+  background: var(--white);
   color: var(--text);
   font-family: Tahoma, Arial, sans-serif;
   line-height: 1.9;
 }
 
-a { color: inherit; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
 
 .container {
-  width: min(1150px, 92%);
+  width: min(1160px, 92%);
   margin: auto;
 }
 
-/* نوار بالایی */
-.topbar {
+/* نوار بالای سایت */
+.header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(5,5,5,.94);
-  backdrop-filter: blur(16px);
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line);
 }
 
-.topbar-inner {
-  width: min(1150px, 94%);
-  min-height: 68px;
+.header-inner {
+  width: min(1160px, 94%);
+  min-height: 72px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 15px;
+  gap: 18px;
 }
 
 .logo {
   color: var(--red);
-  font-size: 19px;
+  font-size: 21px;
   font-weight: 1000;
   font-style: italic;
-  letter-spacing: 1px;
-  text-decoration: none;
+  letter-spacing: .5px;
   white-space: nowrap;
-  text-shadow: 0 0 22px rgba(237,24,40,.22);
 }
 
 .nav {
   display: flex;
+  align-items: center;
   gap: 19px;
   overflow-x: auto;
   white-space: nowrap;
   scrollbar-width: none;
 }
 
-.nav::-webkit-scrollbar { display: none; }
+.nav::-webkit-scrollbar {
+  display: none;
+}
 
 .nav a {
-  color: #ddd;
+  color: #444;
   font-size: 12px;
-  text-decoration: none;
   transition: color .2s;
 }
 
-.nav a:hover { color: var(--red); }
+.nav a:hover {
+  color: var(--red);
+}
 
-/* قهرمان سینمایی */
+/* بخش اصلی */
 .hero {
+  margin: 25px auto 32px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #151515;
+  color: white;
   position: relative;
   isolation: isolate;
-  overflow: hidden;
-  min-height: 370px;
-  margin: 24px auto 35px;
-  padding: 38px 24px 28px;
-  border: 1px solid #512027;
-  border-radius: 24px;
-  background:
-    linear-gradient(120deg, rgba(0,0,0,.95), rgba(20,5,7,.83)),
-    repeating-linear-gradient(
-      135deg,
-      #111 0,
-      #111 2px,
-      #0b0b0b 2px,
-      #0b0b0b 6px
-    );
-  box-shadow: 0 20px 70px rgba(0,0,0,.4);
 }
 
 .hero::before {
   content: "";
   position: absolute;
   z-index: -1;
-  top: -100px;
-  right: -70px;
-  width: 260px;
-  height: 260px;
-  background: rgba(237,24,40,.2);
+  width: 300px;
+  height: 300px;
+  top: -150px;
+  right: -80px;
+  background: rgba(215,25,40,.35);
   filter: blur(85px);
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  bottom: -120px;
-  left: -70px;
-  width: 280px;
-  height: 280px;
-  background: rgba(150,0,12,.16);
-  filter: blur(90px);
+.hero-content {
+  padding: 35px 25px 22px;
+  text-align: center;
 }
 
 .eyebrow {
-  color: #bbb;
+  color: #ff6974;
   font-size: 11px;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 
 .hero h1 {
-  color: var(--red);
-  font-size: clamp(40px, 9vw, 82px);
-  line-height: 1.25;
-  margin: 8px 0;
+  margin: 8px 0 0;
+  color: white;
+  font-size: clamp(37px, 8vw, 70px);
+  line-height: 1.3;
   font-weight: 1000;
   font-style: italic;
-  letter-spacing: 2px;
-  text-shadow: 0 0 32px rgba(237,24,40,.23);
+  letter-spacing: 1px;
+}
+
+.hero h1 span {
+  color: #f02a39;
 }
 
 .hero h2 {
-  color: #fff;
+  margin: 7px 0;
+  color: white;
   font-size: clamp(17px, 4vw, 25px);
-  margin: 8px 0;
 }
 
-.hero-text {
-  max-width: 590px;
-  color: #bcbcbc;
+.hero p {
+  max-width: 600px;
+  margin: 10px auto 20px;
+  color: #d0d0d0;
   font-size: 13px;
-  margin: 12px auto 20px;
 }
 
 .hero-image {
   display: block;
-  width: 100%;
-  max-width: 900px;
-  max-height: 440px;
+  width: calc(100% - 30px);
+  max-width: 1050px;
+  max-height: 470px;
   object-fit: contain;
-  margin: 24px auto;
-  border: 1px solid #343434;
-  border-radius: 15px;
-  background: #050505;
-  box-shadow: 0 20px 55px rgba(0,0,0,.45);
+  margin: 0 auto 20px;
+  border-radius: 12px;
+  background: #0c0c0c;
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
-  margin-top: 20px;
+  gap: 10px;
+  margin: 17px 0 10px;
 }
 
 .btn {
   display: inline-flex;
-  justify-content: center;
   align-items: center;
-  min-height: 45px;
-  padding: 10px 23px;
+  justify-content: center;
+  padding: 10px 21px;
+  min-height: 43px;
+  border: 1px solid var(--red);
+  border-radius: 7px;
+  background: var(--red);
   color: white;
-  background: linear-gradient(135deg, #f52635, #a4000c);
-  border: 1px solid #f3424e;
-  border-radius: 9px;
-  text-decoration: none;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
-  transition: transform .2s, box-shadow .2s;
+  transition: .2s;
 }
 
 .btn:hover {
+  background: var(--red-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(237,24,40,.22);
 }
 
-.btn.secondary {
-  background: #171717;
-  border-color: #454545;
+.btn.light {
+  border-color: #777;
+  background: transparent;
+  color: white;
 }
 
-/* نوار اطلاعات */
-.trust-strip {
+.btn.light:hover {
+  border-color: white;
+  background: #292929;
+}
+
+/* نوار ویژگی‌ها */
+.features {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin: 25px auto 38px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 25px auto 35px;
 }
 
-.trust-item {
-  padding: 15px 7px;
-  border: 1px solid #292929;
+.feature {
+  padding: 17px 8px;
+  text-align: center;
+  border: 1px solid var(--line);
   border-radius: 12px;
-  background: linear-gradient(145deg, #171717, #0b0b0b);
+  background: #fff;
 }
 
-.trust-item strong {
+.feature strong {
   display: block;
-  color: var(--red);
-  font-size: 13px;
+  color: var(--black);
+  font-size: 12px;
 }
 
-.trust-item span {
+.feature span {
   display: block;
-  color: #aaa;
+  color: var(--muted);
   font-size: 10px;
 }
 
-/* بخش‌های اصلی */
+/* بخش‌های سایت */
 .section {
-  margin: 30px auto;
-  padding: 25px;
+  margin: 28px auto;
+  padding: 27px;
   border: 1px solid var(--line);
-  border-radius: 19px;
-  background:
-    linear-gradient(145deg, rgba(25,25,25,.98), rgba(9,9,9,.98));
-  box-shadow: 0 15px 45px rgba(0,0,0,.2);
-  scroll-margin-top: 85px;
+  border-radius: 17px;
+  background: white;
+  scroll-margin-top: 90px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.035);
 }
 
-.section-head {
-  margin-bottom: 22px;
+.section-heading {
+  text-align: center;
+  margin-bottom: 23px;
 }
 
 .kicker {
   color: var(--red);
   font-size: 10px;
-  letter-spacing: 3px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
-.section-title {
-  color: white;
-  font-size: clamp(23px, 5vw, 33px);
-  line-height: 1.5;
+.section h2 {
+  color: var(--black);
+  font-size: clamp(23px, 5vw, 32px);
   margin: 4px 0;
+  line-height: 1.6;
 }
 
-.section-title span { color: var(--red); }
+.section h2 span {
+  color: var(--red);
+}
 
-.section-description {
+.description {
   color: var(--muted);
   font-size: 12px;
-  margin: 4px auto 0;
+  margin: 5px auto;
 }
 
-/* معرفی فروشگاه */
 .about-text {
-  color: #d0d0d0;
-  font-size: 14px;
-  max-width: 760px;
+  max-width: 780px;
   margin: auto;
+  text-align: center;
+  color: #505050;
+  font-size: 14px;
 }
 
+/* عکس فروشگاه */
 .store-image {
   display: block;
   width: 100%;
@@ -296,29 +298,31 @@ a { color: inherit; }
   max-height: 430px;
   object-fit: contain;
   margin: 20px auto;
-  border: 1px solid #333;
-  border-radius: 14px;
-  background: #050505;
+  border-radius: 12px;
+  background: #f5f5f5;
+  border: 1px solid var(--line);
 }
 
 .address {
-  color: #ccc;
+  text-align: center;
+  color: #555;
   font-size: 12px;
 }
 
 /* برندها */
 .brands {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 12px;
 }
 
 .brand {
-  padding: 17px 8px;
-  background: #0a0a0a;
-  border: 1px solid #363636;
+  padding: 17px 10px;
+  text-align: center;
+  border: 1px solid var(--line);
   border-radius: 10px;
-  color: white;
+  background: var(--soft);
+  color: #222;
   font-size: 13px;
   font-weight: bold;
 }
@@ -326,13 +330,14 @@ a { color: inherit; }
 .brand::after {
   content: "";
   display: block;
-  width: 35px;
-  height: 2px;
+  width: 32px;
+  height: 3px;
+  border-radius: 3px;
   background: var(--red);
-  margin: 9px auto 0;
+  margin: 8px auto 0;
 }
 
-/* دسته‌بندی فروشگاه */
+/* دسته‌بندی‌ها */
 .category-grid,
 .product-grid {
   display: grid;
@@ -344,53 +349,55 @@ a { color: inherit; }
   min-width: 0;
   overflow: hidden;
   padding: 9px;
-  border: 1px solid #333;
-  border-radius: 14px;
-  background: linear-gradient(145deg, #1c1c1c, #090909);
-  text-decoration: none;
-  transition: border-color .2s, transform .2s;
+  border: 1px solid #e7e7e7;
+  border-radius: 12px;
+  background: white;
+  text-align: center;
+  transition: .2s;
 }
 
 .category:hover {
   border-color: var(--red);
+  box-shadow: 0 7px 22px rgba(0,0,0,.07);
   transform: translateY(-3px);
 }
 
 .category img {
   display: block;
   width: 100%;
-  height: 150px;
+  height: 155px;
   object-fit: contain;
-  border-radius: 9px;
-  background: #050505;
+  border-radius: 8px;
+  background: #f5f5f5;
 }
 
 .category-name {
-  margin: 9px 0 0;
-  color: white;
+  margin: 8px 0 0;
+  color: #222;
   font-size: 13px;
   font-weight: bold;
 }
 
 .category-hint {
-  margin: 0 0 4px;
-  color: #999;
+  margin: 0;
+  color: var(--red);
   font-size: 10px;
 }
 
-/* گالری محصولات */
+/* کارت محصولات */
 .product {
   min-width: 0;
-  padding: 9px;
   overflow: hidden;
-  border: 1px solid #303030;
-  border-radius: 13px;
-  background: linear-gradient(145deg, #1b1b1b, #080808);
-  transition: border-color .2s, transform .2s;
+  padding: 9px;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  background: white;
+  transition: .2s;
 }
 
 .product:hover {
-  border-color: rgba(237,24,40,.8);
+  border-color: #e5a0a5;
+  box-shadow: 0 7px 24px rgba(0,0,0,.06);
   transform: translateY(-2px);
 }
 
@@ -399,39 +406,72 @@ a { color: inherit; }
   width: 100%;
   height: 190px;
   object-fit: contain;
-  background: #050505;
   border-radius: 8px;
+  background: #f5f5f5;
 }
 
 .product p {
-  color: #eee;
+  margin: 9px 0 2px;
+  text-align: center;
+  color: #333;
   font-size: 12px;
-  margin: 9px 0 0;
 }
 
 /* تماس */
-.contact-grid {
+.contact-panel {
+  text-align: center;
+  border-radius: 13px;
+  padding: 23px 14px;
+  background: #f7f7f7;
+  border: 1px solid var(--line);
+}
+
+.contact-panel p {
+  color: #555;
+  font-size: 12px;
+}
+
+.contact-actions {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
+}
+
+.contact-actions .btn.light {
+  background: white;
+  color: #222;
+  border-color: #ddd;
+}
+
+.contact-actions .btn.light:hover {
+  border-color: var(--red);
+  color: var(--red);
 }
 
 footer {
   margin-top: 35px;
-  padding: 30px 12px;
-  border-top: 1px solid #292929;
-  color: #888;
+  padding: 27px 12px;
+  background: #171717;
+  color: #ccc;
+  text-align: center;
   font-size: 11px;
 }
 
 footer strong {
-  color: var(--red);
-  font-size: 16px;
+  color: #ff3444;
+  font-size: 17px;
+}
+
+footer p {
+  margin: 3px 0;
+  color: #aaa;
 }
 
 @media (min-width: 720px) {
-  .hero { padding: 50px 35px 35px; }
+  .hero-content {
+    padding: 45px 35px 25px;
+  }
 
   .category-grid,
   .product-grid {
@@ -439,25 +479,48 @@ footer strong {
     gap: 17px;
   }
 
-  .category img { height: 205px; }
-  .product img { height: 245px; }
+  .category img {
+    height: 210px;
+  }
+
+  .product img {
+    height: 245px;
+  }
 }
 
 @media (max-width: 430px) {
-  .container { width: 94%; }
+  .container {
+    width: 94%;
+  }
 
-  .topbar-inner {
+  .header-inner {
     width: 96%;
     gap: 8px;
   }
 
-  .logo { font-size: 13px; }
-  .nav { gap: 12px; }
-  .nav a { font-size: 10px; }
+  .logo {
+    font-size: 14px;
+  }
+
+  .nav {
+    gap: 11px;
+  }
+
+  .nav a {
+    font-size: 10px;
+  }
 
   .hero {
-    padding: 29px 12px 22px;
-    border-radius: 17px;
+    margin-top: 15px;
+    border-radius: 14px;
+  }
+
+  .hero-content {
+    padding: 25px 12px 15px;
+  }
+
+  .hero-image {
+    width: calc(100% - 20px);
   }
 
   .section {
@@ -466,33 +529,61 @@ footer strong {
   }
 
   .category-grid,
-  .product-grid { gap: 9px; }
+  .product-grid {
+    gap: 9px;
+  }
 
-  .category { padding: 6px; }
-  .category img { height: 130px; }
+  .category {
+    padding: 6px;
+  }
 
-  .product { padding: 6px; }
-  .product img { height: 155px; }
+  .category img {
+    height: 130px;
+  }
 
-  .trust-strip { gap: 6px; }
-  .trust-item { padding: 12px 4px; }
-  .trust-item strong { font-size: 11px; }
-  .trust-item span { font-size: 9px; }
+  .product {
+    padding: 6px;
+  }
 
-  .btn { padding: 10px 16px; }
+  .product img {
+    height: 155px;
+  }
+
+  .features {
+    gap: 6px;
+  }
+
+  .feature {
+    padding: 12px 4px;
+  }
+
+  .feature strong {
+    font-size: 10px;
+  }
+
+  .feature span {
+    font-size: 9px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { transition: none !important; }
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header class="topbar">
-  <div class="topbar-inner">
+<header class="header">
+  <div class="header-inner">
     <a class="logo" href="#home">RADIO KHAN</a>
 
     <nav class="nav" aria-label="منوی اصلی">
@@ -508,44 +599,50 @@ footer strong {
 <main class="container">
 
   <section class="hero" id="home">
-    <div class="eyebrow">CAR AUDIO • POWER • PERFORMANCE</div>
-    <h1>RADIO KHAN</h1>
-    <h2>صدایی فراتر از انتظار</h2>
+    <div class="hero-content">
+      <div class="eyebrow">CAR AUDIO • POWER • PERFORMANCE</div>
 
-    <p class="hero-text">
-      دنیای سیستم‌های صوتی و تصویری خودرو؛
-      انتخابی برای کسانی که کیفیت صدا برایشان اهمیت دارد.
-    </p>
+      <h1>RADIO <span>KHAN</span></h1>
+
+      <h2>تجربهٔ صدای واقعی</h2>
+
+      <p>
+        فروش تخصصی سیستم‌های صوتی و تصویری خودرو؛
+        تجهیزات حرفه‌ای برای کسانی که کیفیت صدا برایشان اهمیت دارد.
+      </p>
+    </div>
 
     <img class="hero-image"
          src="banner.png"
-         alt="بنر اصلی RADIO KHAN">
+         alt="بنر RADIO KHAN">
 
     <div class="actions">
-      <a class="btn" href="#categories">ورود به فروشگاه</a>
-      <a class="btn secondary" href="#contact">ارتباط با ما</a>
+      <a class="btn" href="#categories">مشاهده محصولات</a>
+      <a class="btn light" href="#contact">تماس با فروشگاه</a>
     </div>
+
+    <div style="height:20px"></div>
   </section>
 
-  <div class="trust-strip">
-    <div class="trust-item">
-      <strong>سیستم صوتی خودرو</strong>
-      <span>تجهیزات تخصصی</span>
+  <div class="features">
+    <div class="feature">
+      <strong>تجهیزات تخصصی</strong>
+      <span>سیستم صوتی خودرو</span>
     </div>
-    <div class="trust-item">
+    <div class="feature">
       <strong>برندهای صوتی</strong>
-      <span>تنوع تجهیزات</span>
+      <span>انتخاب‌های متنوع</span>
     </div>
-    <div class="trust-item">
+    <div class="feature">
       <strong>تبریز</strong>
-      <span>آدرس فروشگاه</span>
+      <span>فروشگاه رادیو خان</span>
     </div>
   </div>
 
   <section class="section" id="about">
-    <div class="section-head">
-      <div class="kicker">OUR STORY</div>
-      <h2 class="section-title">درباره <span>رادیو خان</span></h2>
+    <div class="section-heading">
+      <div class="kicker">ABOUT US</div>
+      <h2>درباره <span>رادیو خان</span></h2>
     </div>
 
     <p class="about-text">
@@ -557,9 +654,9 @@ footer strong {
   </section>
 
   <section class="section" id="shop">
-    <div class="section-head">
-      <div class="kicker">VISIT OUR STORE</div>
-      <h2 class="section-title">فروشگاه <span>ما</span></h2>
+    <div class="section-heading">
+      <div class="kicker">OUR STORE</div>
+      <h2>فروشگاه <span>ما</span></h2>
     </div>
 
     <img class="store-image"
@@ -573,10 +670,10 @@ footer strong {
   </section>
 
   <section class="section" id="brands">
-    <div class="section-head">
+    <div class="section-heading">
       <div class="kicker">OUR BRANDS</div>
-      <h2 class="section-title">برندهای <span>فروشگاه</span></h2>
-      <p class="section-description">برندهای تجهیزات صوتی خودرو</p>
+      <h2>برندهای <span>فروشگاه</span></h2>
+      <p class="description">برندهای تجهیزات صوتی خودرو</p>
     </div>
 
     <div class="brands">
@@ -587,15 +684,16 @@ footer strong {
   </section>
 
   <section class="section" id="categories">
-    <div class="section-head">
-      <div class="kicker">EXPLORE PRODUCTS</div>
-      <h2 class="section-title">فروشگاه <span>محصولات</span></h2>
-      <p class="section-description">
-        دسته موردنظرت را انتخاب کن و محصولات را ببین
+    <div class="section-heading">
+      <div class="kicker">PRODUCT COLLECTION</div>
+      <h2>دسته‌بندی <span>محصولات</span></h2>
+      <p class="description">
+        دستهٔ موردنظرت را انتخاب کن
       </p>
     </div>
 
     <div class="category-grid">
+
       <a class="category" href="#monitor">
         <img src="monitor-1.jpg" alt="مانیتور خودرو" loading="lazy">
         <p class="category-name">مانیتور خودرو</p>
@@ -625,13 +723,14 @@ footer strong {
         <p class="category-name">میدرنج</p>
         <p class="category-hint">مشاهده محصولات</p>
       </a>
+
     </div>
   </section>
 
   <section class="section" id="monitor">
-    <div class="section-head">
+    <div class="section-heading">
       <div class="kicker">01 / DISPLAY</div>
-      <h2 class="section-title">مانیتور <span>خودرو</span></h2>
+      <h2>مانیتور <span>خودرو</span></h2>
     </div>
 
     <div class="product-grid">
@@ -643,13 +742,13 @@ footer strong {
       </div>
     </div>
 
-    <p class="section-description">انواع مانیتور خودرو با کیفیت بالا</p>
+    <p class="description">انواع مانیتور خودرو با کیفیت بالا</p>
   </section>
 
   <section class="section" id="player">
-    <div class="section-head">
+    <div class="section-heading">
       <div class="kicker">02 / MEDIA</div>
-      <h2 class="section-title">پخش <span>خودرو</span></h2>
+      <h2>پخش <span>خودرو</span></h2>
     </div>
 
     <div class="product-grid">
@@ -664,13 +763,13 @@ footer strong {
       </div>
     </div>
 
-    <p class="section-description">انواع پخش خودرو</p>
+    <p class="description">انواع پخش خودرو</p>
   </section>
 
   <section class="section" id="subwoofer">
-    <div class="section-head">
+    <div class="section-heading">
       <div class="kicker">03 / DEEP BASS</div>
-      <h2 class="section-title">ساب <span>ووفر</span></h2>
+      <h2>ساب <span>ووفر</span></h2>
     </div>
 
     <div class="product-grid">
@@ -688,15 +787,15 @@ footer strong {
       </div>
     </div>
 
-    <p class="section-description">
+    <p class="description">
       انواع ساب ووفر برای سیستم صوتی خودرو
     </p>
   </section>
 
   <section class="section" id="amplifier">
-    <div class="section-head">
+    <div class="section-heading">
       <div class="kicker">04 / POWER</div>
-      <h2 class="section-title">آمپلی <span>فایر</span></h2>
+      <h2>آمپلی <span>فایر</span></h2>
     </div>
 
     <div class="product-grid">
@@ -742,15 +841,15 @@ footer strong {
       </div>
     </div>
 
-    <p class="section-description">
-      آمپلی‌فایرهای قدرتمند سیستم صوتی خودرو
+    <p class="description">
+      آمپلی‌فایرهای سیستم صوتی خودرو
     </p>
   </section>
 
   <section class="section" id="midrange">
-    <div class="section-head">
+    <div class="section-heading">
       <div class="kicker">05 / CLEAR SOUND</div>
-      <h2 class="section-title">میدرنج <span>خودرو</span></h2>
+      <h2>میدرنج <span>خودرو</span></h2>
     </div>
 
     <div class="product-grid">
@@ -780,42 +879,47 @@ footer strong {
       </div>
     </div>
 
-    <p class="section-description">
+    <p class="description">
       سیستم صوتی و میدرنج خودرو
     </p>
   </section>
 
   <section class="section" id="contact">
-    <div class="section-head">
-      <div class="kicker">GET IN TOUCH</div>
-      <h2 class="section-title">ارتباط با <span>ما</span></h2>
-      <p class="section-description">
-        برای اطلاعات بیشتر با فروشگاه تماس بگیر
+    <div class="section-heading">
+      <div class="kicker">CONTACT US</div>
+      <h2>ارتباط با <span>ما</span></h2>
+    </div>
+
+    <div class="contact-panel">
+      <p>برای کسب اطلاعات بیشتر با فروشگاه در ارتباط باش.</p>
+
+      <div class="contact-actions">
+        <a class="btn" href="tel:09307974621">
+          تماس با ما
+        </a>
+
+        <a class="btn light"
+           href="https://instagram.com/radio-khaan"
+           target="_blank"
+           rel="noopener noreferrer">
+          صفحه اینستاگرام
+        </a>
+      </div>
+
+      <p>
+        آدرس: آذربایجان شرقی - تبریز - قطران - تقاطع ۱۷ شهریور
       </p>
     </div>
-
-    <div class="contact-grid">
-      <a class="btn" href="tel:09307974621">تماس با فروشگاه</a>
-      <a class="btn secondary"
-         href="https://instagram.com/radio-khaan"
-         target="_blank"
-         rel="noopener noreferrer">صفحه اینستاگرام</a>
-    </div>
-
-    <p class="address">
-      آذربایجان شرقی - تبریز - قطران - تقاطع ۱۷ شهریور
-    </p>
   </section>
 
 </main>
 
 <footer>
   <strong>RADIO KHAN</strong>
-  <br>
-  قدرت واقعی صدا، تجربه‌ای متفاوت
+  <p>تجربه‌ای متفاوت در دنیای سیستم صوتی خودرو</p>
 </footer>
 
 </body>
 </html>
 ```
-          
+        
