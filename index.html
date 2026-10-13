@@ -1,925 +1,991 @@
-```html
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#ffffff">
-<meta name="description" content="RADIO KHAN، فروش تخصصی سیستم صوتی و تصویری خودرو در تبریز">
-<title>RADIO KHAN | فروشگاه تخصصی صوت خودرو</title>
-
-<style>
-:root {
-  --red: #d71928;
-  --red-dark: #a90e1a;
-  --black: #171717;
-  --text: #222;
-  --muted: #737373;
-  --line: #e8e8e8;
-  --soft: #f6f6f6;
-  --white: #fff;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
-}
-
-body {
-  margin: 0;
-  background: var(--white);
-  color: var(--text);
-  font-family: Tahoma, Arial, sans-serif;
-  line-height: 1.9;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-}
-
-.container {
-  width: min(1160px, 92%);
-  margin: auto;
-}
-
-/* نوار بالای سایت */
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(255,255,255,.96);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
-}
-
-.header-inner {
-  width: min(1160px, 94%);
-  min-height: 72px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-}
-
-.logo {
-  color: var(--red);
-  font-size: 21px;
-  font-weight: 1000;
-  font-style: italic;
-  letter-spacing: .5px;
-  white-space: nowrap;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 19px;
-  overflow-x: auto;
-  white-space: nowrap;
-  scrollbar-width: none;
-}
-
-.nav::-webkit-scrollbar {
-  display: none;
-}
-
-.nav a {
-  color: #444;
-  font-size: 12px;
-  transition: color .2s;
-}
-
-.nav a:hover {
-  color: var(--red);
-}
-
-/* بخش اصلی */
-.hero {
-  margin: 25px auto 32px;
-  overflow: hidden;
-  border-radius: 20px;
-  background: #151515;
-  color: white;
-  position: relative;
-  isolation: isolate;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 300px;
-  height: 300px;
-  top: -150px;
-  right: -80px;
-  background: rgba(215,25,40,.35);
-  filter: blur(85px);
-}
-
-.hero-content {
-  padding: 35px 25px 22px;
-  text-align: center;
-}
-
-.eyebrow {
-  color: #ff6974;
-  font-size: 11px;
-  letter-spacing: 3px;
-}
-
-.hero h1 {
-  margin: 8px 0 0;
-  color: white;
-  font-size: clamp(37px, 8vw, 70px);
-  line-height: 1.3;
-  font-weight: 1000;
-  font-style: italic;
-  letter-spacing: 1px;
-}
-
-.hero h1 span {
-  color: #f02a39;
-}
-
-.hero h2 {
-  margin: 7px 0;
-  color: white;
-  font-size: clamp(17px, 4vw, 25px);
-}
-
-.hero p {
-  max-width: 600px;
-  margin: 10px auto 20px;
-  color: #d0d0d0;
-  font-size: 13px;
-}
-
-.hero-image {
-  display: block;
-  width: calc(100% - 30px);
-  max-width: 1050px;
-  max-height: 470px;
-  object-fit: contain;
-  margin: 0 auto 20px;
-  border-radius: 12px;
-  background: #0c0c0c;
-}
-
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin: 17px 0 10px;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 21px;
-  min-height: 43px;
-  border: 1px solid var(--red);
-  border-radius: 7px;
-  background: var(--red);
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  transition: .2s;
-}
-
-.btn:hover {
-  background: var(--red-dark);
-  transform: translateY(-2px);
-}
-
-.btn.light {
-  border-color: #777;
-  background: transparent;
-  color: white;
-}
-
-.btn.light:hover {
-  border-color: white;
-  background: #292929;
-}
-
-/* نوار ویژگی‌ها */
-.features {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin: 25px auto 35px;
-}
-
-.feature {
-  padding: 17px 8px;
-  text-align: center;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: #fff;
-}
-
-.feature strong {
-  display: block;
-  color: var(--black);
-  font-size: 12px;
-}
-
-.feature span {
-  display: block;
-  color: var(--muted);
-  font-size: 10px;
-}
-
-/* بخش‌های سایت */
-.section {
-  margin: 28px auto;
-  padding: 27px;
-  border: 1px solid var(--line);
-  border-radius: 17px;
-  background: white;
-  scroll-margin-top: 90px;
-  box-shadow: 0 8px 30px rgba(0,0,0,.035);
-}
-
-.section-heading {
-  text-align: center;
-  margin-bottom: 23px;
-}
-
-.kicker {
-  color: var(--red);
-  font-size: 10px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.section h2 {
-  color: var(--black);
-  font-size: clamp(23px, 5vw, 32px);
-  margin: 4px 0;
-  line-height: 1.6;
-}
-
-.section h2 span {
-  color: var(--red);
-}
-
-.description {
-  color: var(--muted);
-  font-size: 12px;
-  margin: 5px auto;
-}
-
-.about-text {
-  max-width: 780px;
-  margin: auto;
-  text-align: center;
-  color: #505050;
-  font-size: 14px;
-}
-
-/* عکس فروشگاه */
-.store-image {
-  display: block;
-  width: 100%;
-  max-width: 650px;
-  max-height: 430px;
-  object-fit: contain;
-  margin: 20px auto;
-  border-radius: 12px;
-  background: #f5f5f5;
-  border: 1px solid var(--line);
-}
-
-.address {
-  text-align: center;
-  color: #555;
-  font-size: 12px;
-}
-
-/* برندها */
-.brands {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 12px;
-}
-
-.brand {
-  padding: 17px 10px;
-  text-align: center;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: var(--soft);
-  color: #222;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.brand::after {
-  content: "";
-  display: block;
-  width: 32px;
-  height: 3px;
-  border-radius: 3px;
-  background: var(--red);
-  margin: 8px auto 0;
-}
-
-/* دسته‌بندی‌ها */
-.category-grid,
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 13px;
-}
-
-.category {
-  min-width: 0;
-  overflow: hidden;
-  padding: 9px;
-  border: 1px solid #e7e7e7;
-  border-radius: 12px;
-  background: white;
-  text-align: center;
-  transition: .2s;
-}
-
-.category:hover {
-  border-color: var(--red);
-  box-shadow: 0 7px 22px rgba(0,0,0,.07);
-  transform: translateY(-3px);
-}
-
-.category img {
-  display: block;
-  width: 100%;
-  height: 155px;
-  object-fit: contain;
-  border-radius: 8px;
-  background: #f5f5f5;
-}
-
-.category-name {
-  margin: 8px 0 0;
-  color: #222;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.category-hint {
-  margin: 0;
-  color: var(--red);
-  font-size: 10px;
-}
-
-/* کارت محصولات */
-.product {
-  min-width: 0;
-  overflow: hidden;
-  padding: 9px;
-  border: 1px solid #e8e8e8;
-  border-radius: 12px;
-  background: white;
-  transition: .2s;
-}
-
-.product:hover {
-  border-color: #e5a0a5;
-  box-shadow: 0 7px 24px rgba(0,0,0,.06);
-  transform: translateY(-2px);
-}
-
-.product img {
-  display: block;
-  width: 100%;
-  height: 190px;
-  object-fit: contain;
-  border-radius: 8px;
-  background: #f5f5f5;
-}
-
-.product p {
-  margin: 9px 0 2px;
-  text-align: center;
-  color: #333;
-  font-size: 12px;
-}
-
-/* تماس */
-.contact-panel {
-  text-align: center;
-  border-radius: 13px;
-  padding: 23px 14px;
-  background: #f7f7f7;
-  border: 1px solid var(--line);
-}
-
-.contact-panel p {
-  color: #555;
-  font-size: 12px;
-}
-
-.contact-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-.contact-actions .btn.light {
-  background: white;
-  color: #222;
-  border-color: #ddd;
-}
-
-.contact-actions .btn.light:hover {
-  border-color: var(--red);
-  color: var(--red);
-}
-
-footer {
-  margin-top: 35px;
-  padding: 27px 12px;
-  background: #171717;
-  color: #ccc;
-  text-align: center;
-  font-size: 11px;
-}
-
-footer strong {
-  color: #ff3444;
-  font-size: 17px;
-}
-
-footer p {
-  margin: 3px 0;
-  color: #aaa;
-}
-
-@media (min-width: 720px) {
-  .hero-content {
-    padding: 45px 35px 25px;
-  }
-
-  .category-grid,
-  .product-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 17px;
-  }
-
-  .category img {
-    height: 210px;
-  }
-
-  .product img {
-    height: 245px;
-  }
-}
-
-@media (max-width: 430px) {
-  .container {
-    width: 94%;
-  }
-
-  .header-inner {
-    width: 96%;
-    gap: 8px;
-  }
-
-  .logo {
-    font-size: 14px;
-  }
-
-  .nav {
-    gap: 11px;
-  }
-
-  .nav a {
-    font-size: 10px;
-  }
-
-  .hero {
-    margin-top: 15px;
-    border-radius: 14px;
-  }
-
-  .hero-content {
-    padding: 25px 12px 15px;
-  }
-
-  .hero-image {
-    width: calc(100% - 20px);
-  }
-
-  .section {
-    padding: 15px;
-    margin: 20px auto;
-  }
-
-  .category-grid,
-  .product-grid {
-    gap: 9px;
-  }
-
-  .category {
-    padding: 6px;
-  }
-
-  .category img {
-    height: 130px;
-  }
-
-  .product {
-    padding: 6px;
-  }
-
-  .product img {
-    height: 155px;
-  }
-
-  .features {
-    gap: 6px;
-  }
-
-  .feature {
-    padding: 12px 4px;
-  }
-
-  .feature strong {
-    font-size: 10px;
-  }
-
-  .feature span {
-    font-size: 9px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    transition: none !important;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080a0c">
+  <meta name="description" content="RADIO KHAN؛ مرکز فروش و نصب سیستم صوتی و تصویری خودرو در تبریز.">
+  <title>RADIO KHAN | تخصصی سیستم صوتی خودرو</title>
+
+  <style>
+    :root {
+      --black: #080a0c;
+      --dark: #11161b;
+      --red: #f20d24;
+      --white: #ffffff;
+      --muted: #a7adb5;
+      --light: #f4f5f6;
+      --border: #e5e7eb;
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: var(--light);
+      color: #17191c;
+      line-height: 1.9;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* Header */
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 10, 12, .97);
+      border-bottom: 1px solid #292d32;
+      color: white;
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      color: white;
+      background: transparent;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .logo {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      font-size: clamp(21px, 3.5vw, 32px);
+      font-weight: 1000;
+      font-style: italic;
+      line-height: 1.2;
+      letter-spacing: -1px;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--red);
+    }
+
+    .logo small {
+      color: var(--red);
+      font-size: 10px;
+      letter-spacing: 4px;
+      font-style: normal;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      color: #d8dbe0;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--red);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nav-actions a {
+      font-size: 23px;
+    }
+
+    .nav-actions .contact-icon {
+      color: var(--red);
+    }
+
+    /* Buttons */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 0;
+      border-radius: 50px;
+      padding: 11px 22px;
+      background: var(--red);
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #cf071b;
+    }
+
+    .btn-outline {
+      border: 1px solid #737980;
+      background: transparent;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: #252a30;
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--black);
+      color: white;
+    }
+
+    .hero-grid {
+      min-height: 410px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 35px;
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 13px;
+      color: var(--red);
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 4.5vw, 52px);
+      line-height: 1.5;
+      margin-bottom: 14px;
+      font-weight: 900;
+    }
+
+    .hero h1 span {
+      color: var(--red);
+    }
+
+    .hero p {
+      max-width: 500px;
+      margin-bottom: 25px;
+      color: #c5cbd2;
+      font-size: 15px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-image {
+      min-height: 290px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-height: 355px;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 28px rgba(242,13,36,.12));
+    }
+
+    /* Service features */
+
+    .features {
+      background: var(--dark);
+      color: white;
+      border-top: 1px solid #262a30;
+      border-bottom: 1px solid #262a30;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding-top: 22px;
+      padding-bottom: 22px;
+    }
+
+    .feature {
+      text-align: center;
+      padding: 10px;
+      border-left: 1px solid #383e45;
+    }
+
+    .feature:last-child {
+      border-left: 0;
+    }
+
+    .feature-icon {
+      display: inline-flex;
+      width: 48px;
+      height: 48px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--red);
+      border-radius: 50%;
+      color: var(--red);
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .feature strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .feature p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* General sections */
+
+    .section {
+      padding: 55px 0;
+    }
+
+    .section-dark {
+      background: var(--black);
+      color: white;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+      position: relative;
+      padding-right: 14px;
+      font-size: clamp(20px, 3vw, 27px);
+      font-weight: 900;
+    }
+
+    .section-heading h2::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 18%;
+      width: 4px;
+      height: 65%;
+      border-radius: 5px;
+      background: var(--red);
+    }
+
+    .section-link {
+      color: var(--red);
+      font-size: 13px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    /* Categories */
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .category {
+      text-align: center;
+      color: white;
+      min-width: 0;
+    }
+
+    .category-image {
+      width: 100%;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 2px solid var(--red);
+      border-radius: 50%;
+      background: #15191e;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .category:hover .category-image {
+      transform: translateY(-5px);
+      box-shadow: 0 0 22px rgba(242,13,36,.2);
+    }
+
+    .category img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 8px;
+    }
+
+    .category h3 {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    /* Products */
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .product-card {
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 16px rgba(0,0,0,.045);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 26px rgba(0,0,0,.09);
+    }
+
+    .product-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1 / .83;
+      padding: 14px;
+      background: #fff;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .product-info {
+      padding: 13px;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .product-info h3 {
+      font-size: 14px;
+      line-height: 1.8;
+      margin-bottom: 4px;
+    }
+
+    .product-info p {
+      font-size: 12px;
+      color: #777f89;
+    }
+
+    .product-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+      gap: 8px;
+    }
+
+    .product-bottom a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 32px;
+      min-height: 32px;
+      border-radius: 50%;
+      background: var(--red);
+      color: white;
+      font-size: 18px;
+    }
+
+    .product-bottom small {
+      font-size: 11px;
+      color: #666;
+    }
+
+    /* Store banner */
+
+    .promo {
+      position: relative;
+      overflow: hidden;
+      min-height: 230px;
+      display: flex;
+      align-items: center;
+      border-radius: var(--radius);
+      background: var(--dark);
+      color: white;
+      margin-top: 35px;
+    }
+
+    .promo-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .48;
+    }
+
+    .promo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(8,10,12,.15), rgba(8,10,12,.95));
+    }
+
+    .promo-content {
+      position: relative;
+      z-index: 1;
+      padding: 30px;
+      max-width: 600px;
+    }
+
+    .promo h2 {
+      font-size: clamp(23px, 3.5vw, 34px);
+      margin-bottom: 8px;
+    }
+
+    .promo p {
+      color: #e0e0e0;
+      margin-bottom: 16px;
+    }
+
+    /* Store photo */
+
+    .store-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .store-photo {
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: #ddd;
+    }
+
+    .store-photo img {
+      width: 100%;
+      max-height: 390px;
+      object-fit: cover;
+    }
+
+    .store-copy h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .store-copy p {
+      color: #c4c9ce;
+      margin-bottom: 18px;
+    }
+
+    .brand-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .brand-list span {
+      border: 1px solid #42474e;
+      border-radius: 7px;
+      padding: 5px 12px;
+      color: #f0f0f0;
+      font-size: 12px;
+    }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .contact-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+
+    .contact-card .contact-icon {
+      font-size: 25px;
+      color: var(--red);
+    }
+
+    .contact-card h3 {
+      font-size: 16px;
+      margin: 7px 0;
+    }
+
+    .contact-card p {
+      color: #666d76;
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    /* Footer */
+
+    .footer {
+      background: var(--black);
+      color: white;
+      border-top: 3px solid var(--red);
+      padding: 38px 0 18px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 30px;
+      padding-bottom: 28px;
+    }
+
+    .footer h3 {
+      margin-bottom: 10px;
+    }
+
+    .footer p,
+    .footer a {
+      color: #b7bdc5;
+      font-size: 13px;
+    }
+
+    .footer a:hover {
+      color: var(--red);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .copyright {
+      padding-top: 16px;
+      border-top: 1px solid #272b30;
+      text-align: center;
+      color: #8f969f;
+      font-size: 11px;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 760px) {
+      .nav {
+        min-height: 66px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 66px;
+        right: 0;
+        left: 0;
+        padding: 18px 5%;
+        background: #101317;
+        border-bottom: 1px solid #34383e;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 6px 0;
+      }
+
+      .nav-actions {
+        gap: 9px;
+      }
+
+      .nav-actions a {
+        font-size: 20px;
+      }
+
+      .nav-actions .btn {
+        display: none;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+        padding-top: 35px;
+        padding-bottom: 25px;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero p {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-image {
+        min-height: 190px;
+      }
+
+      .hero-image img {
+        max-height: 245px;
+      }
+
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .feature:nth-child(2) {
+        border-left: 0;
+      }
+
+      .feature:nth-child(-n+2) {
+        border-bottom: 1px solid #383e45;
+      }
+
+      .categories {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px 12px;
+      }
+
+      .category h3 {
+        font-size: 12px;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .product-info {
+        padding: 10px;
+      }
+
+      .product-info h3 {
+        font-size: 12px;
+      }
+
+      .product-info p {
+        font-size: 11px;
+      }
+
+      .product-bottom small {
+        font-size: 10px;
+      }
+
+      .section {
+        padding: 38px 0;
+      }
+
+      .promo {
+        min-height: 210px;
+      }
+
+      .promo-content {
+        padding: 22px;
+      }
+
+      .store-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .store-copy h2 {
+        font-size: 23px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .logo {
+        font-size: 19px;
+      }
+
+      .categories {
+        gap: 15px 8px;
+      }
+
+      .category h3 {
+        font-size: 11px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="header">
-  <div class="header-inner">
-    <a class="logo" href="#home">RADIO KHAN</a>
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
 
-    <nav class="nav" aria-label="منوی اصلی">
-      <a href="#home">خانه</a>
-      <a href="#about">درباره ما</a>
-      <a href="#categories">محصولات</a>
-      <a href="#shop">فروشگاه</a>
-      <a href="#contact">تماس</a>
-    </nav>
-  </div>
-</header>
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="باز کردن منو" aria-expanded="false">☰</button>
 
-<main class="container">
-
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <div class="eyebrow">CAR AUDIO • POWER • PERFORMANCE</div>
-
-      <h1>RADIO <span>KHAN</span></h1>
-
-      <h2>تجربهٔ صدای واقعی</h2>
-
-      <p>
-        فروش تخصصی سیستم‌های صوتی و تصویری خودرو؛
-        تجهیزات حرفه‌ای برای کسانی که کیفیت صدا برایشان اهمیت دارد.
-      </p>
-    </div>
-
-    <img class="hero-image"
-         src="banner.png"
-         alt="بنر RADIO KHAN">
-
-    <div class="actions">
-      <a class="btn" href="#categories">مشاهده محصولات</a>
-      <a class="btn light" href="#contact">تماس با فروشگاه</a>
-    </div>
-
-    <div style="height:20px"></div>
-  </section>
-
-  <div class="features">
-    <div class="feature">
-      <strong>تجهیزات تخصصی</strong>
-      <span>سیستم صوتی خودرو</span>
-    </div>
-    <div class="feature">
-      <strong>برندهای صوتی</strong>
-      <span>انتخاب‌های متنوع</span>
-    </div>
-    <div class="feature">
-      <strong>تبریز</strong>
-      <span>فروشگاه رادیو خان</span>
-    </div>
-  </div>
-
-  <section class="section" id="about">
-    <div class="section-heading">
-      <div class="kicker">ABOUT US</div>
-      <h2>درباره <span>رادیو خان</span></h2>
-    </div>
-
-    <p class="about-text">
-      رادیو خان ارائه‌دهنده سیستم‌های صوتی و تصویری خودرو،
-      مانیتور اندروید، پخش خودرو، آمپلی‌فایر، ساب‌ووفر و تجهیزات
-      حرفه‌ای صوتی خودرو است. ما با ارائه محصولات باکیفیت و
-      خدمات تخصصی همراه شما هستیم.
-    </p>
-  </section>
-
-  <section class="section" id="shop">
-    <div class="section-heading">
-      <div class="kicker">OUR STORE</div>
-      <h2>فروشگاه <span>ما</span></h2>
-    </div>
-
-    <img class="store-image"
-         src="shop-photo.jpg"
-         alt="تصویر فروشگاه RADIO KHAN"
-         loading="lazy">
-
-    <p class="address">
-      آذربایجان شرقی - تبریز - قطران - تقاطع ۱۷ شهریور
-    </p>
-  </section>
-
-  <section class="section" id="brands">
-    <div class="section-heading">
-      <div class="kicker">OUR BRANDS</div>
-      <h2>برندهای <span>فروشگاه</span></h2>
-      <p class="description">برندهای تجهیزات صوتی خودرو</p>
-    </div>
-
-    <div class="brands">
-      <div class="brand">TT TECHNOLOGY</div>
-      <div class="brand">WARR SOUND</div>
-      <div class="brand">SPEADWARD</div>
-    </div>
-  </section>
-
-  <section class="section" id="categories">
-    <div class="section-heading">
-      <div class="kicker">PRODUCT COLLECTION</div>
-      <h2>دسته‌بندی <span>محصولات</span></h2>
-      <p class="description">
-        دستهٔ موردنظرت را انتخاب کن
-      </p>
-    </div>
-
-    <div class="category-grid">
-
-      <a class="category" href="#monitor">
-        <img src="monitor-1.jpg" alt="مانیتور خودرو" loading="lazy">
-        <p class="category-name">مانیتور خودرو</p>
-        <p class="category-hint">مشاهده محصولات</p>
+      <a class="logo" href="#home" aria-label="RADIO KHAN">
+        RADIO <span>KHAN</span>
+        <small>CAR AUDIO SPECIALIST</small>
       </a>
 
-      <a class="category" href="#player">
-        <img src="player-1.jpg" alt="پخش خودرو" loading="lazy">
-        <p class="category-name">پخش خودرو</p>
-        <p class="category-hint">مشاهده محصولات</p>
-      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">صفحه اصلی</a>
+        <a href="#categories">دسته‌بندی محصولات</a>
+        <a href="#products">محصولات</a>
+        <a href="#about">درباره ما</a>
+        <a href="#contact">تماس با ما</a>
+      </nav>
 
-      <a class="category" href="#subwoofer">
-        <img src="subwoofer-1.jpg" alt="ساب ووفر" loading="lazy">
-        <p class="category-name">ساب ووفر</p>
-        <p class="category-hint">مشاهده محصولات</p>
-      </a>
-
-      <a class="category" href="#amplifier">
-        <img src="amplifier-1.jpg" alt="آمپلی فایر" loading="lazy">
-        <p class="category-name">آمپلی فایر</p>
-        <p class="category-hint">مشاهده محصولات</p>
-      </a>
-
-      <a class="category" href="#midrange">
-        <img src="midrange-1.jpg" alt="میدرنج" loading="lazy">
-        <p class="category-name">میدرنج</p>
-        <p class="category-hint">مشاهده محصولات</p>
-      </a>
+      <div class="nav-actions">
+        <a href="#products" aria-label="محصولات">⌕</a>
+        <a class="contact-icon" href="tel:09307974621"
+          aria-label="تماس با فروشگاه">☎</a>
+        <a class="btn" href="#contact">ارتباط با ما</a>
+      </div>
 
     </div>
-  </section>
+  </header>
 
-  <section class="section" id="monitor">
-    <div class="section-heading">
-      <div class="kicker">01 / DISPLAY</div>
-      <h2>مانیتور <span>خودرو</span></h2>
-    </div>
+  <main>
 
-    <div class="product-grid">
-      <div class="product">
-        <img src="monitor-1.jpg" alt="مانیتور خودرو ۱" loading="lazy">
-      </div>
-      <div class="product">
-        <img src="monitor-2.jpg" alt="مانیتور خودرو ۲" loading="lazy">
-      </div>
-    </div>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
 
-    <p class="description">انواع مانیتور خودرو با کیفیت بالا</p>
-  </section>
+        <div class="hero-copy">
+          <span class="eyebrow">RADIO KHAN · TABRIZ</span>
 
-  <section class="section" id="player">
-    <div class="section-heading">
-      <div class="kicker">02 / MEDIA</div>
-      <h2>پخش <span>خودرو</span></h2>
-    </div>
+          <h1>
+            صدای متفاوت،<br>
+            <span>انتخاب حرفه‌ای</span>
+          </h1>
 
-    <div class="product-grid">
-      <div class="product">
-        <img src="player-1.jpg" alt="پخش خودرو ۱" loading="lazy">
-      </div>
-      <div class="product">
-        <img src="player-2.jpg" alt="پخش خودرو ۲" loading="lazy">
-      </div>
-      <div class="product">
-        <img src="player-3.jpg" alt="پخش خودرو ۳" loading="lazy">
-      </div>
-    </div>
+          <p>
+            مرکز تخصصی فروش و نصب سیستم صوتی و تصویری خودرو؛
+            همراه شما برای انتخاب تجهیزات مناسب خودرو.
+          </p>
 
-    <p class="description">انواع پخش خودرو</p>
-  </section>
+          <div class="hero-buttons">
+            <a class="btn" href="#categories">مشاهده محصولات ←</a>
+            <a class="btn btn-outline" href="#about">درباره فروشگاه</a>
+          </div>
+        </div>
 
-  <section class="section" id="subwoofer">
-    <div class="section-heading">
-      <div class="kicker">03 / DEEP BASS</div>
-      <h2>ساب <span>ووفر</span></h2>
-    </div>
+        <div class="hero-image">
+          <img src="banner.png"
+            alt="تجهیزات صوتی خودرو RADIO KHAN"
+            onerror="this.style.display='none'">
+        </div>
 
-    <div class="product-grid">
-      <div class="product">
-        <img src="subwoofer-1.jpg" alt="ساب ووفر ۱" loading="lazy">
       </div>
-      <div class="product">
-        <img src="subwoofer-2.jpg" alt="ساب ووفر ۲" loading="lazy">
-      </div>
-      <div class="product">
-        <img src="subwoofer-3.jpg" alt="ساب ووفر ۳" loading="lazy">
-      </div>
-      <div class="product">
-        <img src="subwoofer-4.jpg" alt="ساب ووفر ۴" loading="lazy">
-      </div>
-    </div>
+    </section>
 
-    <p class="description">
-      انواع ساب ووفر برای سیستم صوتی خودرو
-    </p>
-  </section>
+    <!-- Services -->
+    <section class="features">
+      <div class="container feature-grid">
 
-  <section class="section" id="amplifier">
-    <div class="section-heading">
-      <div class="kicker">04 / POWER</div>
-      <h2>آمپلی <span>فایر</span></h2>
-    </div>
+        <div class="feature">
+          <span class="feature-icon">♧</span>
+          <strong>مشاوره تخصصی</strong>
+          <p>کمک به انتخاب محصول مناسب</p>
+        </div>
 
-    <div class="product-grid">
-      <div class="product">
-        <img src="amplifier-1.jpg" alt="آمپلی فایر ۱" loading="lazy">
-        <p>آمپلی فایر ۱</p>
-      </div>
-      <div class="product">
-        <img src="amplifier-2.jpg" alt="آمپلی فایر ۲" loading="lazy">
-        <p>آمپلی فایر ۲</p>
-      </div>
-      <div class="product">
-        <img src="amplifier-3.jpg" alt="آمپلی فایر ۳" loading="lazy">
-        <p>آمپلی فایر ۳</p>
-      </div>
-      <div class="product">
-        <img src="amplifier-4.jpg" alt="آمپلی فایر ۴" loading="lazy">
-        <p>آمپلی فایر ۴</p>
-      </div>
-      <div class="product">
-        <img src="amplifier-5.jpg" alt="آمپلی فایر ۵" loading="lazy">
-        <p>آمپلی فایر ۵</p>
-      </div>
-      <div class="product">
-        <img src="amplifier-6.jpg" alt="آمپلی فایر ۶" loading="lazy">
-        <p>آمپلی فایر ۶</p>
-      </div>
-      <div class="product">
-        <img src="amplifier-7.jpg" alt="آمپلی فایر ۷" loading="lazy">
-        <p>آمپلی فایر ۷</p>
-      </div>
-      <div class="product">
-        <img src="amplifier-8.jpg" alt="آمپلی فایر ۸" loading="lazy">
-        <p>آمپلی فایر ۸</p>
-      </div>
-      <div class="product">
-        <img src="amplifier-9.jpg" alt="آمپلی فایر ۹" loading="lazy">
-        <p>آمپلی فایر ۹</p>
-      </div>
-      <div class="product">
-        <img src="amplifier-10.jpg" alt="آمپلی فایر ۱۰" loading="lazy">
-        <p>آمپلی فایر ۱۰</p>
-      </div>
-    </div>
+        <div class="feature">
+          <span class="feature-icon">⚙</span>
+          <strong>فروش تجهیزات</strong>
+          <p>تنوع محصولات صوتی خودرو</p>
+        </div>
 
-    <p class="description">
-      آمپلی‌فایرهای سیستم صوتی خودرو
-    </p>
-  </section>
+        <div class="feature">
+          <span class="feature-icon">✓</span>
+          <strong>توجه به کیفیت</strong>
+          <p>راهنمایی پیش از خرید</p>
+        </div>
 
-  <section class="section" id="midrange">
-    <div class="section-heading">
-      <div class="kicker">05 / CLEAR SOUND</div>
-      <h2>میدرنج <span>خودرو</span></h2>
-    </div>
+        <div class="feature">
+          <span class="feature-icon">☎</span>
+          <strong>پشتیبانی و تماس</strong>
+          <p>ارتباط مستقیم با فروشگاه</p>
+        </div>
 
-    <div class="product-grid">
-      <div class="product">
-        <img src="midrange-1.jpg" alt="میدرنج ۱" loading="lazy">
-        <p>میدرنج ۱</p>
       </div>
-      <div class="product">
-        <img src="midrange-2.jpg" alt="میدرنج ۲" loading="lazy">
-        <p>میدرنج ۲</p>
+    </section>
+
+    <!-- Categories -->
+    <section class="section section-dark" id="categories">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>دسته‌بندی محصولات</h2>
+          <a class="section-link" href="#products">مشاهده همه ←</a>
+        </div>
+
+        <div class="categories">
+
+          <a class="category" href="#amplifiers">
+            <div class="category-image">
+              <img src="amplifier-1.jpg" alt="آمپلی‌فایر">
+            </div>
+            <h3>آمپلی‌فایر</h3>
+          </a>
+
+          <a class="category" href="#midrange">
+            <div class="category-image">
+              <img src="midrange-1.jpg" alt="میدرنج">
+            </div>
+            <h3>میدرنج</h3>
+          </a>
+
+          <a class="category" href="#subwoofers">
+            <div class="category-image">
+              <img src="subwoofer-1.jpg" alt="ساب‌ووفر">
+            </div>
+            <h3>ساب‌ووفر</h3>
+          </a>
+
+          <a class="category" href="#monitors">
+            <div class="category-image">
+              <img src="monitor-1.jpg" alt="مانیتور خودرو">
+            </div>
+            <h3>مانیتور خودرو</h3>
+          </a>
+
+          <a class="category" href="#players">
+            <div class="category-image">
+              <img src="player-1.jpg" alt="پخش خودرو">
+            </div>
+            <h3>پخش خودرو</h3>
+          </a>
+
+        </div>
       </div>
-      <div class="product">
-        <img src="midrange-3.jpg" alt="میدرنج ۳" loading="lazy">
-        <p>میدرنج ۳</p>
-      </div>
-      <div class="product">
-        <img src="midrange-6.jpg" alt="میدرنج ۶" loading="lazy">
-        <p>میدرنج ۶</p>
-      </div>
-      <div class="product">
-        <img src="midrange-8.jpg" alt="میدرنج ۸" loading="lazy">
-        <p>میدرنج ۸</p>
-      </div>
-      <div class="product">
-        <img src="midrange-9.jpg" alt="میدرنج ۹" loading="lazy">
-        <p>میدرنج ۹</p>
-      </div>
-    </div>
+    </section>
 
-    <p class="description">
-      سیستم صوتی و میدرنج خودرو
-    </p>
-  </section>
+    <!-- Featured products -->
+    <section class="section" id="products">
+      <div class="container">
 
-  <section class="section" id="contact">
-    <div class="section-heading">
-      <div class="kicker">CONTACT US</div>
-      <h2>ارتباط با <span>ما</span></h2>
-    </div>
+        <div class="section-heading">
+          <h2>محصولات منتخب</h2>
+          <a class="section-link" href="#contact">استعلام محصول ←</a>
+        </div>
 
-    <div class="contact-panel">
-      <p>برای کسب اطلاعات بیشتر با فروشگاه در ارتباط باش.</p>
+        <div class="product-grid">
 
-      <div class="contact-actions">
-        <a class="btn" href="tel:09307974621">
-          تماس با ما
-        </a>
+          <article class="product-card" id="amplifiers">
+            <div class="product-image">
+              <img src="amplifier-1.jpg" alt="آمپلی‌فایر خودرو">
+            </div>
+            <div class="product-info">
+              <h3>آمپلی‌فایر خودرو</h3>
+              <p>سیستم صوتی خودرو</p>
+              <div class="product-bottom">
+                <small>برای قیمت تماس بگیرید</small>
+                <a href="tel:09307974621" aria-label="تماس درباره آمپلی‌فایر">←</a>
+              </div>
+            </div>
+          </article>
 
-        <a class="btn light"
-           href="https://instagram.com/radio-khaan"
-           target="_blank"
-           rel="noopener noreferrer">
-          صفحه اینستاگرام
-        </a>
-      </div>
+          <article class="product-card" id="subwoofers">
+            <div class="product-image">
+              <img src="subwoofer-1.jpg" alt="ساب‌ووفر خودرو">
+            </div>
+            <div class="product-info">
+              <h3>ساب‌ووفر خودرو</h3>
+              <p>بیس و صدای قدرتمند</p>
+              <div class="product-bottom">
+                <small>برای قیمت تماس بگیرید</small>
+                <a href="tel:09307974621" aria-label="تماس درباره ساب‌ووفر">←</a>
+              </div>
+            </div>
+          </article>
 
-      <p>
-        آدرس: آذربایجان شرقی - تبریز - قطران - تقاطع ۱۷ شهریور
-      </p>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <strong>RADIO KHAN</strong>
-  <p>تجربه‌ای متفاوت در دنیای سیستم صوتی خودرو</p>
-</footer>
-
-</body>
-</html>
-```
-        
+          <article class="product-card" id="midrange">
+            <div class="product-image">
+              <img src="midrange-1.jpg" alt="میدرنج خودرو">
+            </div>
+            <div class="product-info">
+              <h3>میدرنج خودرو</h3>
+              <p>تجهیزات صوتی خودرو</p>
+              <div class="product-bottom">
+                <small>برای قیمت تماس بگیرید</small>
+                <a href="tel:09307974621" aria-label="تماس درباره میدرنج">←</a>
+              </div>
+   
