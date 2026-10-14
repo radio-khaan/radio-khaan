@@ -1,991 +1,442 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#080a0c">
-  <meta name="description" content="RADIO KHAN؛ مرکز فروش و نصب سیستم صوتی و تصویری خودرو در تبریز.">
-  <title>RADIO KHAN | تخصصی سیستم صوتی خودرو</title>
-
+  <meta name="description" content="RADIO KHAN؛ مرکز تخصصی فروش و نصب سیستم صوتی و تصویری خودرو در تبریز.">
+  <title>RADIO KHAN | سیستم صوتی خودرو</title>
   <style>
     :root {
       --black: #080a0c;
       --dark: #11161b;
       --red: #f20d24;
-      --white: #ffffff;
+      --white: #fff;
       --muted: #a7adb5;
       --light: #f4f5f6;
       --border: #e5e7eb;
       --radius: 16px;
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 85px; }
+    body { font-family: Tahoma, Arial, sans-serif; background: var(--light); color: #17191c; line-height: 1.9; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    img { display: block; max-width: 100%; }
+    .container { width: min(1180px, 92%); margin: auto; }
+    .header { position: sticky; top: 0; z-index: 100; background: rgba(8,10,12,.97); border-bottom: 1px solid #292d32; color: white; backdrop-filter: blur(12px); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .menu-toggle { display: none; border: 0; color: white; background: transparent; font-size: 28px; cursor: pointer; }
+    .logo { display: inline-flex; flex-direction: column; align-items: center; color: white; font-size: clamp(21px,3.5vw,32px); font-weight: 1000; font-style: italic; line-height: 1.2; letter-spacing: -1px; white-space: nowrap; }
+    .logo span { color: var(--red); }
+    .logo small { color: var(--red); font-size: 10px; letter-spacing: 4px; font-style: normal; }
+    .nav-links { display: flex; align-items: center; gap: 22px; font-size: 13px; }
+    .nav-links a { color: #d8dbe0; transition: color .2s; }
+    .nav-links a:hover, .footer a:hover { color: var(--red); }
+    .nav-actions { display: flex; align-items: center; gap: 14px; }
+    .nav-actions a { font-size: 23px; }
+    .nav-actions .contact-icon { color: var(--red); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 50px; padding: 11px 22px; background: var(--red); color: white; font-size: 14px; font-weight: bold; cursor: pointer; transition: transform .2s, background .2s; }
+    .btn:hover { transform: translateY(-2px); background: #cf071b; }
+    .btn-outline { border: 1px solid #737980; background: transparent; color: white; }
+    .btn-outline:hover { background: #252a30; }
+    .hero { position: relative; overflow: hidden; background: radial-gradient(ellipse at 75% 45%, #252027 0, var(--black) 58%); color: white; }
+    .hero-grid { min-height: 410px; display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 35px; padding: 32px 0; }
+    .hero-copy { position: relative; z-index: 2; }
+    .eyebrow { display: inline-block; margin-bottom: 13px; color: var(--red); font-size: 13px; font-weight: bold; letter-spacing: 1px; }
+    .hero h1 { font-size: clamp(30px,4.5vw,52px); line-height: 1.5; margin-bottom: 14px; font-weight: 900; }
+    .hero h1 span { color: var(--red); }
+    .hero p { max-width: 500px; margin-bottom: 25px; color: #c5cbd2; font-size: 15px; }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 10px; }
+    .hero-image { min-height: 290px; display: flex; align-items: center; justify-content: center; }
+    .hero-image img { width: 100%; max-height: 355px; object-fit: contain; filter: drop-shadow(0 10px 28px rgba(242,13,36,.16)); }
+    .features { background: var(--dark); color: white; border-top: 1px solid #262a30; border-bottom: 1px solid #262a30; }
+    .feature-grid { display: grid; grid-template-columns: repeat(4,1fr); padding: 22px 0; }
+    .feature { text-align: center; padding: 10px; border-left: 1px solid #383e45; }
+    .feature:last-child { border-left: 0; }
+    .feature-icon { display: inline-flex; width: 48px; height: 48px; align-items: center; justify-content: center; border: 1px solid var(--red); border-radius: 50%; color: var(--red); font-size: 22px; margin-bottom: 8px; }
+    .feature strong { display: block; font-size: 14px; }
+    .feature p { color: var(--muted); font-size: 12px; }
+    .section { padding: 55px 0; }
+    .section-dark { background: var(--black); color: white; }
+    .section-heading { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-bottom: 25px; }
+    .section-heading h2 { position: relative; padding-right: 14px; font-size: clamp(20px,3vw,27px); font-weight: 900; }
+    .section-heading h2::before { content: ""; position: absolute; right: 0; top: 18%; width: 4px; height: 65%; border-radius: 5px; background: var(--red); }
+    .section-link { color: var(--red); font-size: 13px; font-weight: bold; white-space: nowrap; }
+    .categories { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 18px; }
+    .category { text-align: center; color: white; min-width: 0; }
+    .category-image { width: 100%; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 2px solid var(--red); border-radius: 50%; background: #15191e; transition: transform .25s, box-shadow .25s; }
+    .category:hover .category-image { transform: translateY(-5px); box-shadow: 0 0 22px rgba(242,13,36,.2); }
+    .category img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
+    .category h3 { margin-top: 10px; font-size: 14px; }
+    .brand-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+    .brand-card { position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: center; min-height: 155px; padding: 25px; border: 1px solid #30353b; border-radius: var(--radius); background: linear-gradient(135deg,#191d22,#0d0f12); text-align: center; transition: transform .2s,border-color .2s,box-shadow .2s; }
+    .brand-card::before { content: ""; position: absolute; inset: auto 0 0; height: 3px; background: var(--red); transform: scaleX(.25); transition: transform .2s; }
+    .brand-card:hover { transform: translateY(-4px); border-color: var(--red); box-shadow: 0 12px 28px #0005; }
+    .brand-card:hover::before { transform: scaleX(1); }
+    .brand-card strong { color: white; font-size: clamp(18px,2.8vw,25px); letter-spacing: .5px; }
+    .brand-card span { color: var(--muted); font-size: 12px; margin-top: 8px; }
+    .product-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 18px; }
+    .product-card { overflow: hidden; background: white; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 4px 16px rgba(0,0,0,.045); transition: transform .2s,box-shadow .2s; }
+    .product-card:hover { transform: translateY(-4px); box-shadow: 0 10px 26px rgba(0,0,0,.09); }
+    .product-image { display: flex; align-items: center; justify-content: center; aspect-ratio: 1/.83; padding: 14px; background: #fff; }
+    .product-image img { width: 100%; height: 100%; object-fit: contain; }
+    .product-info { padding: 13px; border-top: 1px solid #f0
+        .promo-content { position: relative; z-index: 1; max-width: 560px; padding: 30px; }
+    .promo h2 { font-size: clamp(22px,4vw,34px); margin-bottom: 10px; }
+    .promo h2 span { color: var(--red); }
+    .promo p { color: #c1c6cd; margin-bottom: 18px; font-size: 14px; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 35px; }
+    .about-copy p { margin: 12px 0; color: #c3c8cf; font-size: 14px; }
+    .about-points { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+    .about-point { padding: 12px; background: #15191e; border: 1px solid #2c3137; border-radius: 10px; font-size: 13px; }
+    .about-point span { color: var(--red); font-size: 18px; margin-left: 7px; }
+    .contact-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+    .contact-card { padding: 22px 16px; border: 1px solid #30353b; border-radius: var(--radius); background: #12161a; text-align: center; color: white; overflow-wrap: anywhere; }
+    .contact-card .contact-symbol { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; color: var(--red); border: 1px solid var(--red); font-size: 22px; margin-bottom: 12px; }
+    .contact-card h3 { font-size: 15px; margin-bottom: 8px; }
+    .contact-card p,.contact-card a { color: #c3c8cf; font-size: 13px; }
+    .contact-card a:hover { color: var(--red); }
+    .footer { padding: 30px 0; background: #050607; color: #aab0b7; border-top: 1px solid #262a30; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .footer-brand { color: white; font-size: 21px; font-weight: 900; font-style: italic; }
+    .footer-brand span { color: var(--red); }
+    .footer p { font-size: 12px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 15px; font-size: 12px; }
+    .whatsapp-float { position: fixed; bottom: 20px; left: 20px; z-index: 90; display: flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 50%; background: #20bd5a; color: white; font-size: 27px; box-shadow: 0 5px 20px #0004; }
+    .back-top { position: fixed; bottom: 84px; left: 27px; z-index: 80; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid #444; border-radius: 50%; background: #111; color: white; font-size: 20px; }
+    .empty-note { color: #777; text-align: center; padding: 20px; display: none; }
+    @media (max-width: 900px) {
+      .nav-links { gap: 12px; font-size: 12px; }
+      .nav-actions .btn { padding: 9px 13px; }
+      .hero-grid { min-height: 350px; gap: 15px; }
+      .product-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+      .categories { gap: 12px; }
+    }
+    @media (max-width: 680px) {
+      .nav { min-height: 66px; }
+      .menu-toggle { display: block; order: 3; }
+      .logo { font-size: 24px; }
+      .nav-actions { margin-right: auto; }
+      .nav-actions .btn { display: none; }
+      .nav-links { position: absolute; display: none; top: 66px; right: 0; left: 0; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 4%; background: #090b0d; border-bottom: 1px solid #30353b; }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 11px 8px; border-bottom: 1px solid #22262b; }
+      .hero-grid { grid-template-columns: 1fr; padding: 35px 0 25px; gap: 5px; }
+      .hero-copy { text-align: center; }
+      .hero p { margin-right: auto; margin-left: auto; }
+      .hero-buttons { justify-content: center; }
+      .hero-image { min-height: 180px; }
+      .hero-image img { max-height: 235px; }
+      .feature-grid { grid-template-columns: repeat(2,1fr); }
+      .feature:nth-child(2) { border-left: 0; }
+      .feature:nth-child(-n+2) { border-bottom: 1px solid #383e45; }
+      .section { padding: 40px 0; }
+      .categories { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px 12px; }
+      .category h3 { font-size: 12px; }
+      .brand-grid { grid-template-columns: 1fr; gap: 12px; }
+      .brand-card { min-height: 120px; }
+      .product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+      .product-info { padding: 10px; }
+      .product-info h3 { font-size: 12px; }
+      .product-image { padding: 9px; }
+      .promo { min-height: 210px; }
+      .promo-content { padding: 22px; }
+      .about-grid { grid-template-columns: 1fr; gap: 18px; }
+      .about-points { gap: 8px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 12px; }
+      .contact-card { padding: 17px; }
+      .section-heading { align-items: flex-start; }
+      .footer-content { justify-content: center; text-align: center; }
+      .footer-links { justify-content: center; }
     }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 85px;
-    }
-
-    body {
-      font-family: Tahoma, Arial, sans-serif;
-      background: var(--light);
-      color: #17191c;
-      line-height: 1.9;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button {
-      font: inherit;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    .container {
-      width: min(1180px, 92%);
-      margin: auto;
-    }
-
-    /* Header */
-
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(8, 10, 12, .97);
-      border-bottom: 1px solid #292d32;
-      color: white;
-    }
-
-    .nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
-
-    .menu-toggle {
-      display: none;
-      border: 0;
-      color: white;
-      background: transparent;
-      font-size: 28px;
-      cursor: pointer;
-    }
-
-    .logo {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      color: white;
-      font-size: clamp(21px, 3.5vw, 32px);
-      font-weight: 1000;
-      font-style: italic;
-      line-height: 1.2;
-      letter-spacing: -1px;
-      white-space: nowrap;
-    }
-
-    .logo span {
-      color: var(--red);
-    }
-
-    .logo small {
-      color: var(--red);
-      font-size: 10px;
-      letter-spacing: 4px;
-      font-style: normal;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      font-size: 13px;
-    }
-
-    .nav-links a {
-      color: #d8dbe0;
-      transition: color .2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--red);
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .nav-actions a {
-      font-size: 23px;
-    }
-
-    .nav-actions .contact-icon {
-      color: var(--red);
-    }
-
-    /* Buttons */
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      border: 0;
-      border-radius: 50px;
-      padding: 11px 22px;
-      background: var(--red);
-      color: white;
-      font-size: 14px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: transform .2s, background .2s;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      background: #cf071b;
-    }
-
-    .btn-outline {
-      border: 1px solid #737980;
-      background: transparent;
-      color: white;
-    }
-
-    .btn-outline:hover {
-      background: #252a30;
-    }
-
-    /* Hero */
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background: var(--black);
-      color: white;
-    }
-
-    .hero-grid {
-      min-height: 410px;
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      align-items: center;
-      gap: 35px;
-      padding-top: 32px;
-      padding-bottom: 32px;
-    }
-
-    .hero-copy {
-      position: relative;
-      z-index: 2;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 13px;
-      color: var(--red);
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    .hero h1 {
-      font-size: clamp(30px, 4.5vw, 52px);
-      line-height: 1.5;
-      margin-bottom: 14px;
-      font-weight: 900;
-    }
-
-    .hero h1 span {
-      color: var(--red);
-    }
-
-    .hero p {
-      max-width: 500px;
-      margin-bottom: 25px;
-      color: #c5cbd2;
-      font-size: 15px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .hero-image {
-      min-height: 290px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-image img {
-      width: 100%;
-      max-height: 355px;
-      object-fit: contain;
-      filter: drop-shadow(0 10px 28px rgba(242,13,36,.12));
-    }
-
-    /* Service features */
-
-    .features {
-      background: var(--dark);
-      color: white;
-      border-top: 1px solid #262a30;
-      border-bottom: 1px solid #262a30;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      padding-top: 22px;
-      padding-bottom: 22px;
-    }
-
-    .feature {
-      text-align: center;
-      padding: 10px;
-      border-left: 1px solid #383e45;
-    }
-
-    .feature:last-child {
-      border-left: 0;
-    }
-
-    .feature-icon {
-      display: inline-flex;
-      width: 48px;
-      height: 48px;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--red);
-      border-radius: 50%;
-      color: var(--red);
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-
-    .feature strong {
-      display: block;
-      font-size: 14px;
-    }
-
-    .feature p {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    /* General sections */
-
-    .section {
-      padding: 55px 0;
-    }
-
-    .section-dark {
-      background: var(--black);
-      color: white;
-    }
-
-    .section-heading {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 15px;
-      margin-bottom: 25px;
-    }
-
-    .section-heading h2 {
-      position: relative;
-      padding-right: 14px;
-      font-size: clamp(20px, 3vw, 27px);
-      font-weight: 900;
-    }
-
-    .section-heading h2::before {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 18%;
-      width: 4px;
-      height: 65%;
-      border-radius: 5px;
-      background: var(--red);
-    }
-
-    .section-link {
-      color: var(--red);
-      font-size: 13px;
-      font-weight: bold;
-      white-space: nowrap;
-    }
-
-    /* Categories */
-
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .category {
-      text-align: center;
-      color: white;
-      min-width: 0;
-    }
-
-    .category-image {
-      width: 100%;
-      aspect-ratio: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border: 2px solid var(--red);
-      border-radius: 50%;
-      background: #15191e;
-      transition: transform .25s, box-shadow .25s;
-    }
-
-    .category:hover .category-image {
-      transform: translateY(-5px);
-      box-shadow: 0 0 22px rgba(242,13,36,.2);
-    }
-
-    .category img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      padding: 8px;
-    }
-
-    .category h3 {
-      margin-top: 10px;
-      font-size: 14px;
-    }
-
-    /* Products */
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .product-card {
-      overflow: hidden;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: 0 4px 16px rgba(0,0,0,.045);
-      transition: transform .2s, box-shadow .2s;
-    }
-
-    .product-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 26px rgba(0,0,0,.09);
-    }
-
-    .product-image {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      aspect-ratio: 1 / .83;
-      padding: 14px;
-      background: #fff;
-    }
-
-    .product-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .product-info {
-      padding: 13px;
-      border-top: 1px solid #f0f0f0;
-    }
-
-    .product-info h3 {
-      font-size: 14px;
-      line-height: 1.8;
-      margin-bottom: 4px;
-    }
-
-    .product-info p {
-      font-size: 12px;
-      color: #777f89;
-    }
-
-    .product-bottom {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 10px;
-      gap: 8px;
-    }
-
-    .product-bottom a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 32px;
-      min-height: 32px;
-      border-radius: 50%;
-      background: var(--red);
-      color: white;
-      font-size: 18px;
-    }
-
-    .product-bottom small {
-      font-size: 11px;
-      color: #666;
-    }
-
-    /* Store banner */
-
-    .promo {
-      position: relative;
-      overflow: hidden;
-      min-height: 230px;
-      display: flex;
-      align-items: center;
-      border-radius: var(--radius);
-      background: var(--dark);
-      color: white;
-      margin-top: 35px;
-    }
-
-    .promo-image {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: .48;
-    }
-
-    .promo::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, rgba(8,10,12,.15), rgba(8,10,12,.95));
-    }
-
-    .promo-content {
-      position: relative;
-      z-index: 1;
-      padding: 30px;
-      max-width: 600px;
-    }
-
-    .promo h2 {
-      font-size: clamp(23px, 3.5vw, 34px);
-      margin-bottom: 8px;
-    }
-
-    .promo p {
-      color: #e0e0e0;
-      margin-bottom: 16px;
-    }
-
-    /* Store photo */
-
-    .store-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-      align-items: center;
-    }
-
-    .store-photo {
-      overflow: hidden;
-      border-radius: var(--radius);
-      background: #ddd;
-    }
-
-    .store-photo img {
-      width: 100%;
-      max-height: 390px;
-      object-fit: cover;
-    }
-
-    .store-copy h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
-
-    .store-copy p {
-      color: #c4c9ce;
-      margin-bottom: 18px;
-    }
-
-    .brand-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 20px 0;
-    }
-
-    .brand-list span {
-      border: 1px solid #42474e;
-      border-radius: 7px;
-      padding: 5px 12px;
-      color: #f0f0f0;
-      font-size: 12px;
-    }
-
-    /* Contact */
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .contact-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 22px;
-    }
-
-    .contact-card .contact-icon {
-      font-size: 25px;
-      color: var(--red);
-    }
-
-    .contact-card h3 {
-      font-size: 16px;
-      margin: 7px 0;
-    }
-
-    .contact-card p {
-      color: #666d76;
-      font-size: 13px;
-      overflow-wrap: anywhere;
-    }
-
-    /* Footer */
-
-    .footer {
-      background: var(--black);
-      color: white;
-      border-top: 3px solid var(--red);
-      padding: 38px 0 18px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
-      gap: 30px;
-      padding-bottom: 28px;
-    }
-
-    .footer h3 {
-      margin-bottom: 10px;
-    }
-
-    .footer p,
-    .footer a {
-      color: #b7bdc5;
-      font-size: 13px;
-    }
-
-    .footer a:hover {
-      color: var(--red);
-    }
-
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
-
-    .copyright {
-      padding-top: 16px;
-      border-top: 1px solid #272b30;
-      text-align: center;
-      color: #8f969f;
-      font-size: 11px;
-    }
-
-    /* Mobile */
-
-    @media (max-width: 760px) {
-      .nav {
-        min-height: 66px;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 66px;
-        right: 0;
-        left: 0;
-        padding: 18px 5%;
-        background: #101317;
-        border-bottom: 1px solid #34383e;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-links a {
-        padding: 6px 0;
-      }
-
-      .nav-actions {
-        gap: 9px;
-      }
-
-      .nav-actions a {
-        font-size: 20px;
-      }
-
-      .nav-actions .btn {
-        display: none;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 5px;
-        padding-top: 35px;
-        padding-bottom: 25px;
-      }
-
-      .hero-copy {
-        text-align: center;
-      }
-
-      .hero p {
-        margin-right: auto;
-        margin-left: auto;
-      }
-
-      .hero-buttons {
-        justify-content: center;
-      }
-
-      .hero-image {
-        min-height: 190px;
-      }
-
-      .hero-image img {
-        max-height: 245px;
-      }
-
-      .feature-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .feature:nth-child(2) {
-        border-left: 0;
-      }
-
-      .feature:nth-child(-n+2) {
-        border-bottom: 1px solid #383e45;
-      }
-
-      .categories {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 18px 12px;
-      }
-
-      .category h3 {
-        font-size: 12px;
-      }
-
-      .product-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-      }
-
-      .product-info {
-        padding: 10px;
-      }
-
-      .product-info h3 {
-        font-size: 12px;
-      }
-
-      .product-info p {
-        font-size: 11px;
-      }
-
-      .product-bottom small {
-        font-size: 10px;
-      }
-
-      .section {
-        padding: 38px 0;
-      }
-
-      .promo {
-        min-height: 210px;
-      }
-
-      .promo-content {
-        padding: 22px;
-      }
-
-      .store-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .store-copy h2 {
-        font-size: 23px;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 22px;
-      }
-    }
-
     @media (max-width: 360px) {
-      .logo {
-        font-size: 19px;
-      }
-
-      .categories {
-        gap: 15px 8px;
-      }
-
-      .category h3 {
-        font-size: 11px;
-      }
-
-      .hero h1 {
-        font-size: 28px;
-      }
+      .container { width: 94%; }
+      .logo { font-size: 20px; }
+      .categories { gap: 14px 8px; }
+      .product-grid { gap: 8px; }
+      .product-info { padding: 8px; }
+      .btn { padding: 10px 15px; font-size: 12px; }
     }
   </style>
 </head>
-
 <body>
-
-  <!-- Header -->
   <header class="header">
     <div class="container nav">
-
-      <button class="menu-toggle" id="menuToggle"
-        aria-label="باز کردن منو" aria-expanded="false">☰</button>
-
+      <button class="menu-toggle" id="menuToggle" aria-label="باز کردن منو" aria-expanded="false">☰</button>
       <a class="logo" href="#home" aria-label="RADIO KHAN">
-        RADIO <span>KHAN</span>
-        <small>CAR AUDIO SPECIALIST</small>
+        <span>RADIO KHAN</span>
+        <small>AUTO SOUND</small>
       </a>
-
       <nav class="nav-links" id="navLinks">
         <a href="#home">صفحه اصلی</a>
+        <a href="#brands">برندها</a>
         <a href="#categories">دسته‌بندی محصولات</a>
         <a href="#products">محصولات</a>
         <a href="#about">درباره ما</a>
         <a href="#contact">تماس با ما</a>
       </nav>
-
       <div class="nav-actions">
-        <a href="#products" aria-label="محصولات">⌕</a>
-        <a class="contact-icon" href="tel:09307974621"
-          aria-label="تماس با فروشگاه">☎</a>
+        <a class="contact-icon" href="tel:09307974621" aria-label="تماس تلفنی">☎</a>
         <a class="btn" href="#contact">ارتباط با ما</a>
       </div>
-
     </div>
   </header>
 
   <main>
-
-    <!-- Hero -->
     <section class="hero" id="home">
       <div class="container hero-grid">
-
         <div class="hero-copy">
-          <span class="eyebrow">RADIO KHAN · TABRIZ</span>
-
-          <h1>
-            صدای متفاوت،<br>
-            <span>انتخاب حرفه‌ای</span>
-          </h1>
-
-          <p>
-            مرکز تخصصی فروش و نصب سیستم صوتی و تصویری خودرو؛
-            همراه شما برای انتخاب تجهیزات مناسب خودرو.
-          </p>
-
+          <span class="eyebrow">تخصصی‌ترین مرکز سیستم صوتی خودرو</span>
+          <h1>صدایی متفاوت با <span>RADIO KHAN</span></h1>
+          <p>مرکز فروش و نصب سیستم‌های صوتی و تصویری خودرو؛ با معرفی محصولات متنوع برای علاقه‌مندان به صدای باکیفیت.</p>
           <div class="hero-buttons">
-            <a class="btn" href="#categories">مشاهده محصولات ←</a>
-            <a class="btn btn-outline" href="#about">درباره فروشگاه</a>
+            <a class="btn" href="#products">مشاهده محصولات</a>
+            <a class="btn btn-outline" href="#contact">تماس با فروشگاه</a>
           </div>
         </div>
-
         <div class="hero-image">
-          <img src="banner.png"
-            alt="تجهیزات صوتی خودرو RADIO KHAN"
-            onerror="this.style.display='none'">
+          <img src="banner.png" alt="بنر تبلیغاتی RADIO KHAN" onerror="this.onerror=null;this.src='main-banner.png';">
         </div>
-
       </div>
     </section>
 
-    <!-- Services -->
-    <section class="features">
+    <section class="features" aria-label="ویژگی‌های فروشگاه">
       <div class="container feature-grid">
-
         <div class="feature">
-          <span class="feature-icon">♧</span>
-          <strong>مشاوره تخصصی</strong>
-          <p>کمک به انتخاب محصول مناسب</p>
+          <span class="feature-icon">♫</span>
+          <strong>تجهیزات صوتی خودرو</strong>
+          <p>محصولات متنوع صوتی</p>
         </div>
-
+        <div class="feature">
+          <span class="feature-icon">◈</span>
+          <strong>سیستم‌های تصویری</strong>
+          <p>نمایشگر و پخش خودرو</p>
+        </div>
         <div class="feature">
           <span class="feature-icon">⚙</span>
-          <strong>فروش تجهیزات</strong>
-          <p>تنوع محصولات صوتی خودرو</p>
+          <strong>فروش و نصب</strong>
+          <p>خدمات تخصصی خودرو</p>
         </div>
-
         <div class="feature">
           <span class="feature-icon">✓</span>
-          <strong>توجه به کیفیت</strong>
-          <p>راهنمایی پیش از خرید</p>
+          <strong>مشاوره خرید</strong>
+          <p>راهنمایی برای انتخاب محصول</p>
         </div>
-
-        <div class="feature">
-          <span class="feature-icon">☎</span>
-          <strong>پشتیبانی و تماس</strong>
-          <p>ارتباط مستقیم با فروشگاه</p>
+      </div>
+    </section>
+        <section class="section section-dark" id="brands">
+      <div class="container">
+        <div class="section-heading">
+          <h2>برندهای فروشگاه</h2>
+          <span class="section-link">RADIO KHAN</span>
         </div>
-
+        <div class="brand-grid">
+          <div class="brand-card">
+            <strong>TT TECHNOLOGY</strong>
+            <span>تجهیزات صوتی خودرو</span>
+          </div>
+          <div class="brand-card">
+            <strong>SPEAD WARD</strong>
+            <span>محصولات صوتی خودرو</span>
+          </div>
+          <div class="brand-card">
+            <strong>WARR SOUND</strong>
+            <span>تجهیزات حرفه‌ای صدا</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Categories -->
     <section class="section section-dark" id="categories">
       <div class="container">
-
         <div class="section-heading">
           <h2>دسته‌بندی محصولات</h2>
-          <a class="section-link" href="#products">مشاهده همه ←</a>
         </div>
-
         <div class="categories">
-
           <a class="category" href="#amplifiers">
             <div class="category-image">
-              <img src="amplifier-1.jpg" alt="آمپلی‌فایر">
+              <img src="amplifier-1.jpg" alt="آمپلی‌فایر خودرو" loading="lazy">
             </div>
             <h3>آمپلی‌فایر</h3>
           </a>
-
-          <a class="category" href="#midrange">
+          <a class="category" href="#midranges">
             <div class="category-image">
-              <img src="midrange-1.jpg" alt="میدرنج">
+              <img src="midrange-1.jpg" alt="میدرنج خودرو" loading="lazy">
             </div>
             <h3>میدرنج</h3>
           </a>
-
           <a class="category" href="#subwoofers">
             <div class="category-image">
-              <img src="subwoofer-1.jpg" alt="ساب‌ووفر">
+              <img src="subwoofer-1.jpg" alt="ساب‌ووفر خودرو" loading="lazy">
             </div>
             <h3>ساب‌ووفر</h3>
           </a>
-
           <a class="category" href="#monitors">
             <div class="category-image">
-              <img src="monitor-1.jpg" alt="مانیتور خودرو">
+              <img src="monitor-1.jpg" alt="مانیتور خودرو" loading="lazy">
             </div>
-            <h3>مانیتور خودرو</h3>
+            <h3>مانیتور</h3>
           </a>
-
           <a class="category" href="#players">
             <div class="category-image">
-              <img src="player-1.jpg" alt="پخش خودرو">
+              <img src="player-1.jpg" alt="پخش خودرو" loading="lazy">
             </div>
             <h3>پخش خودرو</h3>
           </a>
-
         </div>
       </div>
     </section>
 
-    <!-- Featured products -->
     <section class="section" id="products">
       <div class="container">
-
         <div class="section-heading">
-          <h2>محصولات منتخب</h2>
-          <a class="section-link" href="#contact">استعلام محصول ←</a>
+          <h2>محصولات فروشگاه</h2>
+          <span class="section-link">RADIO KHAN</span>
         </div>
 
-        <div class="product-grid">
-
-          <article class="product-card" id="amplifiers">
+        <div class="product-grid" id="amplifiers">
+          <article class="product-card">
             <div class="product-image">
-              <img src="amplifier-1.jpg" alt="آمپلی‌فایر خودرو">
+              <img src="amplifier-1.jpg" alt="آمپلی‌فایر ۱" loading="lazy">
             </div>
             <div class="product-info">
-              <h3>آمپلی‌فایر خودرو</h3>
-              <p>سیستم صوتی خودرو</p>
-              <div class="product-bottom">
-                <small>برای قیمت تماس بگیرید</small>
-                <a href="tel:09307974621" aria-label="تماس درباره آمپلی‌فایر">←</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card" id="subwoofers">
-            <div class="product-image">
-              <img src="subwoofer-1.jpg" alt="ساب‌ووفر خودرو">
-            </div>
-            <div class="product-info">
-              <h3>ساب‌ووفر خودرو</h3>
-              <p>بیس و صدای قدرتمند</p>
-              <div class="product-bottom">
-                <small>برای قیمت تماس بگیرید</small>
-                <a href="tel:09307974621" aria-label="تماس درباره ساب‌ووفر">←</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card" id="midrange">
-            <div class="product-image">
-              <img src="midrange-1.jpg" alt="میدرنج خودرو">
-            </div>
-            <div class="product-info">
-              <h3>میدرنج خودرو</h3>
+              <h3>آمپلی‌فایر خودرو ۱</h3>
               <p>تجهیزات صوتی خودرو</p>
               <div class="product-bottom">
-                <small>برای قیمت تماس بگیرید</small>
-                <a href="tel:09307974621" aria-label="تماس درباره میدرنج">←</a>
+                <small>برای اطلاع از قیمت تماس بگیرید</small>
+                <a href="tel:09307974621" aria-label="تماس درباره آمپلی‌فایر ۱">☎</a>
               </div>
-   
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-image">
+              <img src="amplifier-2.jpg" alt="آمپلی‌فایر ۲" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>آمپلی‌فایر خودرو ۲</h3>
+              <p>تجهیزات صوتی خودرو</p>
+              <div class="product-bottom">
+                <small>برای اطلاع از قیمت تماس بگیرید</small>
+                <a href="tel:09307974621" aria-label="تماس درباره آمپلی‌فایر ۲">☎</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-image">
+              <img src="amplifier-3.jpg" alt="آمپلی‌فایر ۳" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>آمپلی‌فایر خودرو ۳</h3>
+              <p>تجهیزات صوتی خودرو</p>
+              <div class="product-bottom">
+                <small>برای اطلاع از قیمت تماس بگیرید</small>
+                <a href="tel:09307974621" aria-label="تماس درباره آمپلی‌فایر ۳">☎</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-image">
+              <img src="amplifier-4.jpg" alt="آمپلی‌فایر ۴" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>آمپلی‌فایر خودرو ۴</h3>
+              <p>تجهیزات صوتی خودرو</p>
+              <div class="product-bottom">
+                <small>برای اطلاع از قیمت تماس بگیرید</small>
+                <a href="tel:09307974621" aria-label="تماس درباره آمپلی‌فایر ۴">☎</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-image">
+              <img src="amplifier-5.jpg" alt="آمپلی‌فایر ۵" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>آمپلی‌فایر خودرو ۵</h3>
+              <p>تجهیزات صوتی خودرو</p>
+              <div class="product-bottom">
+                <small>برای اطلاع از قیمت تماس بگیرید</small>
+                <a href="tel:09307974621" aria-label="تماس درباره آمپلی‌فایر ۵">☎</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-image">
+              <img src="amplifier-6.jpg" alt="آمپلی‌فایر ۶" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>آمپلی‌فایر خودرو ۶</h3>
+              <p>تجهیزات صوتی خودرو</p>
+              <div class="product-bottom">
+                <small>برای اطلاع از قیمت تماس بگیرید</small>
+                <a href="tel:09307974621" aria-label="تماس درباره آمپلی‌فایر ۶">☎</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-image">
+              <img src="amplifier-7.jpg" alt="آمپلی‌فایر ۷" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>آمپلی‌فایر خودرو ۷</h3>
+              <p>تجهیزات صوتی خودرو</p>
+              <div class="product-bottom">
+                <small>برای اطلاع از قیمت تماس بگیرید</small>
+                <a href="tel:09307974621" aria-label="تماس درباره آمپلی‌فایر ۷">☎</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-image">
+              <img src="amplifier-8.jpg" alt="آمپلی‌فایر ۸" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>آمپلی‌فایر خودرو ۸</h3>
+              <p>تجهیزات صوتی خودرو</p>
+              <div class="product-bottom">
+                <small>برای اطلاع از قیمت تماس بگیرید</small>
+                <a href="tel:09307974621" aria-label="تماس درباره آمپلی‌فایر ۸">☎</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-image">
+              <img src="amplifier-9.jpg" alt="آمپلی‌فایر ۹" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>آمپلی‌فایر خودرو ۹</h3>
+              <p>تجهیزات صوتی خودرو</p>
+              <div class="product-bottom">
+                <small>برای اطلاع از قیمت تماس بگیرید</small>
+                <a href="tel:09307974621" aria-label="تماس درباره آمپلی‌فایر ۹">☎</a>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-image">
+              <img src="amplifier-10.jpg" alt="آمپلی‌فایر ۱۰" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>آمپلی‌فایر خودرو ۱۰</h3>
+              <p>تجهیزات صوتی خودرو</p>
+              <div class="product-bottom">
+                <small>برای اطلاع از قیمت تماس بگیرید</small>
+                <a href="tel:09307974621" aria-label="تماس درباره آمپلی‌فایر ۱۰">☎</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-heading" id="midranges" style="margin-top:45px">
+          <h2>میدرنج‌ها</h2>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image"><img src="midrange-1.jpg" alt="میدرنج ۱" loading="lazy"></div>
+            <div class="product-info"><h3>میدرنج خودرو ۱</h3><p>بلندگوی خودرو</p><div class="product-bottom"><small>استعلام قیمت</small><a href="tel:09307974621" aria-label="تماس درباره میدرنج ۱">☎</a></div></div>
+          </article>
+          <article class="product-card">
+            <div class="product-image"><img src="midrange-2.jpg" alt="میدرنج ۲" loading="lazy"></div>
+            <div class="product-info"><h3>میدرنج خودرو ۲</h3><p>بلندگوی خودرو</p><div class="product-bottom"><small>استعلام قیمت</small
+                                                                                                                                  
