@@ -323,4 +323,106 @@ footer p{font-size:12px;margin:0}
 
   <!-- مانیتورها -->
   <div class="group" id="monitors"><div class="section-title"><h2>مانیتورهای خودرو</h2></div><div class="products">
-   <article class="produc
+   <article class="product">
+    <div class="product-img"><img src="monitor-1.jpg" alt="مانیتور خودرو 1" loading="lazy"></div>
+    <div class="product-info">
+     <div class="product-name"><h3>مانیتور خودرو 1</h3><p class="product-desc">نمایشگر باکیفیت با لمس روان</p></div>
+     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
+    </div>
+   </article>
+   <article class="product">
+    <div class="product-img"><img src="monitor-2.jpg" alt="مانیتور خودرو 2" loading="lazy"></div>
+    <div class="product-info">
+     <div class="product-name"><h3>مانیتور خودرو 2</h3><p class="product-desc">سازگار با سیستم‌های اندروید و اپل</p></div>
+     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
+    </div>
+   </article>
+  </div></div>
+
+  <!-- ساب ووفرها -->
+  <div class="group" id="subwoofers"><div class="section-title"><h2>ساب‌ووفرها</h2></div><div class="products">
+   <article class="product">
+    <div class="product-img"><img src="subwoofer-1.jpg" alt="ساب‌ووفر خودرو 1" loading="lazy"></div>
+    <div class="product-info">
+     <div class="product-name"><h3>ساب‌ووفر خودرو 1</h3><p class="product-desc">بیس قدرتمند و عمیق</p></div>
+     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
+    </div>
+   </article>
+   <article class="product">
+    <div class="product-img"><img src="subwoofer-2.jpg" alt="ساب‌ووفر خودرو 2" loading="lazy"></div>
+    <div class="product-info">
+     <div class="product-name"><h3>ساب‌ووفر خودرو 2</h3><p class="product-desc">صدای بم عالی برای موسیقی‌های هیجانی</p></div>
+     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
+    </div>
+   </article>
+   <article class="product">
+    <div class="product-img"><img src="subwoofer-3.jpg" alt="ساب‌ووفر خودرو 3" loading="lazy"></div>
+    <div class="product-info">
+     <div class="product-name"><h3>ساب‌ووفر خودرو 3</h3><p class="product-desc">ساختار مستحکم و تحمل توان بالا</p></div>
+     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
+    </div>
+   </article>
+   <article class="product">
+    <div class="product-img"><img src="subwoofer-4.jpg" alt="ساب‌ووفر خودرو 4" loading="lazy"></div>
+    <div class="product-info">
+     <div class="product-name"><h3>ساب‌ووفر خودرو 4</h3><p class="product-desc">مناسب برای نصب در باکس‌های کوچک</p></div>
+     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
+    </div>
+   </article>
+  </div></div>
+
+ </div>
+</section>
+
+<!-- بخش درباره ما -->
+<section class="content dark" id="about">
+ <div class="container about">
+  <div><div class="section-title"><h2>درباره RADIO KHAN</h2></div>
+   <p>رادیو خان، مرکز فروش و نصب سیستم‌های صوتی و تصویری خودرو در تبریز است.</p>
+   <p>برای اطلاع از موجودی محصولات، قیمت‌ها و خدمات نصب با فروشگاه در ارتباط باشید.</p>
+  </div>
+  <div class="about-logo"><strong>RADIO KHAN</strong><span>CAR AUDIO SYSTEM</span></div>
+ </div>
+</section>
+
+<!-- بخش تماس با ما -->
+<section class="content dark" id="contact">
+ <div class="container">
+  <div class="section-title"><h2>تماس با فروشگاه</h2></div>
+  <div class="contact-grid">
+   <div class="contact-card"><div class="symbol">☎</div><h3>شماره تماس</h3><a href="tel:09307974621" dir="ltr">09307974621</a></div>
+   <div class="contact-card"><div class="symbol">◎</div><h3>اینستاگرام فروشگاه</h3><a href="https://instagram.com/radio-khaan" target="_blank" rel="noopener noreferrer">@radio-khaan</a></div>
+   <div class="contact-card"><div class="symbol">⌖</div><h3>آدرس فروشگاه</h3><p>آذربایجان شرقی، تبریز، قطران، تقاطع ۱۷ شهریور</p></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<!-- فوتر (پایین سایت) -->
+<footer>
+ <div class="container footer-inner">
+  <a class="footer-logo" href="#home">RADIO KHAN</a>
+  <p>فروش و نصب سیستم صوتی و تصویری خودرو</p>
+  <p>© RADIO KHAN</p>
+ </div>
+</footer>
+
+<!-- دکمه شناور تماس -->
+<a class="float-call" href="tel:09307974621" aria-label="تماس با فروشگاه">☎</a>
+
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>{
+ const opened=navLinks.classList.toggle('open');
+ menuBtn.setAttribute('aria-expanded',String(opened));
+ menuBtn.textContent=opened?'×':'☰';
+});
+navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
+ navLinks.classList.remove('open');
+ menuBtn.setAttribute('aria-expanded','false');
+ menuBtn.textContent='☰';
+}));
+</script>
+</body>
+</html>
