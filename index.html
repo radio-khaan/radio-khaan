@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -55,8 +55,6 @@ section.content{padding:48px 0}
 .category .circle{aspect-ratio:1;border:2px solid var(--red);border-radius:50%;background:#161616;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .category img{width:100%;height:100%;object-fit:contain;padding:10px}
 .category b{display:block;margin-top:9px;font-size:14px}
-
-/* استایل جدید کارت محصولات */
 .products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .product{min-width:0;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;border-radius:12px;background:#fff;color:#161616;border:1px solid #e6e6e6;box-shadow:0 4px 15px #0000000b;transition:transform 0.3s}
 .product:hover{transform:translateY(-5px);box-shadow:0 8px 25px #00000015}
@@ -67,7 +65,6 @@ section.content{padding:48px 0}
 .product-desc{font-size:11px;color:#666;margin:0 0 12px 0;line-height:1.6}
 .btn-order{display:block;text-align:center;background:#f0f0f0;color:#ed1028;padding:8px;border-radius:8px;font-size:12px;font-weight:bold;transition:0.3s}
 .btn-order:hover{background:var(--red);color:#fff}
-
 .group{margin-top:35px;scroll-margin-top:85px}
 .about{display:grid;grid-template-columns:1fr .7fr;gap:24px;align-items:center}
 .about p{color:#ccc;font-size:14px}
@@ -83,7 +80,8 @@ footer{background:#030303;color:#bbb;padding:24px 0;border-top:1px solid #333}
 .footer-logo{font-size:21px;color:var(--red);font-weight:900;font-style:italic;direction:ltr}
 footer p{font-size:12px;margin:0}
 .float-call{position:fixed;bottom:18px;left:18px;z-index:50;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--red);color:white;font-size:23px;box-shadow:0 4px 18px #0004}
-
+.float-wa{position:fixed;bottom:80px;left:18px;z-index:50;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#25d366;color:white;box-shadow:0 4px 18px #0004;transition:transform 0.3s}
+.float-wa:hover{transform:scale(1.1)}
 @media(max-width:850px){.links{gap:10px;font-size:12px}.products{grid-template-columns:repeat(3,minmax(0,1fr))}.product-img{height:175px}.hero-inner{min-height:320px}}
 @media(max-width:650px){
  .nav{min-height:66px}.menu-btn{display:block;order:3}.logo{font-size:22px}.nav .btn{display:none}
@@ -104,7 +102,7 @@ footer p{font-size:12px;margin:0}
   <button class="menu-btn" id="menuBtn" aria-label="باز کردن منو" aria-expanded="false">☰</button>
   <a class="logo" href="#home">RADIO KHAN<small>AUTO SOUND</small></a>
   <nav class="links" id="navLinks">
-   <a href="#home">صفحه اصلی</a><a href="#brands">نمایندگی‌ها و برندها</a><a href="#categories">دسته‌بندی‌ها</a><a href="#products">محصولات</a><a href="#about">درباره ما</a><a href="#contact">تماس با ما</a>
+   <a href="#home">صفحه اصلی</a><a href="#brands">برندها</a><a href="#categories">دسته‌بندی‌ها</a><a href="#products">محصولات</a><a href="#gallery">نمونه نصب</a><a href="#about">درباره ما</a><a href="#contact">تماس با ما</a>
   </nav>
   <a class="btn" href="tel:09307974621">تماس با فروشگاه</a>
  </div>
@@ -118,7 +116,7 @@ footer p{font-size:12px;margin:0}
    <p>فروش و نصب سیستم‌های صوتی و تصویری خودرو در تبریز؛ برای اطلاع از محصولات و خدمات با ما تماس بگیرید.</p>
    <div class="hero-actions"><a class="btn" href="#products">مشاهده محصولات</a><a class="btn secondary" href="#contact">ارتباط با ما</a></div>
   </div>
-  <div class="hero-img"><img src="banner.png" alt="بنر تبلیغاتی RADIO KHAN" onerror="this.onerror=null;this.src='main-banner.png';"></div>
+  <div class="hero-img"><img src="banner.jpg" alt="بنر تبلیغاتی RADIO KHAN" onerror="this.onerror=null;this.src='banner.png';"></div>
  </div>
 </section>
 <section class="features">
@@ -155,237 +153,76 @@ footer p{font-size:12px;margin:0}
  <div class="container">
   <div class="section-title"><h2>محصولات فروشگاه</h2><p>برای استعلام قیمت کلیک کنید</p></div>
   
-  <!-- آمپلی فایرها -->
   <div class="group" id="amplifiers"><div class="section-title"><h2>آمپلی‌فایرها</h2></div><div class="products">
-   <article class="product">
-    <div class="product-img"><img src="amplifier-1.jpg" alt="آمپلی‌فایر خودرو 1" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>آمپلی‌فایر خودرو 1</h3><p class="product-desc">قدرت فوق‌العاده و کیفیت صدای استودیویی</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="amplifier-2.jpg" alt="آمپلی‌فایر خودرو 2" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>آمپلی‌فایر خودرو 2</h3><p class="product-desc">مناسب برای سیستم‌های پرقدرت بیس</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="amplifier-3.jpg" alt="آمپلی‌فایر خودرو 3" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>آمپلی‌فایر خودرو 3</h3><p class="product-desc">طراحی جمع و جور با راندمان بالا</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="amplifier-4.jpg" alt="آمپلی‌فایر خودرو 4" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>آمپلی‌فایر خودرو 4</h3><p class="product-desc">کیفیت ساخت بالا و صدای شفاف</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="amplifier-5.jpg" alt="آمپلی‌فایر خودرو 5" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>آمپلی‌فایر خودرو 5</h3><p class="product-desc">انتخاب حرفه‌ای‌ها برای سیستم صوتی</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="amplifier-6.jpg" alt="آمپلی‌فایر خودرو 6" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>آمپلی‌فایر خودرو 6</h3><p class="product-desc">قدرت پایدار و بدون افت کیفیت</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="amplifier-7.jpg" alt="آمپلی‌فایر خودرو 7" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>آمپلی‌فایر خودرو 7</h3><p class="product-desc">طراحی مدرن با بدنه آلومینیومی</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="amplifier-8.jpg" alt="آمپلی‌فایر خودرو 8" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>آمپلی‌فایر خودرو 8</h3><p class="product-desc">مناسب برای نصب در فضای محدود</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="amplifier-9.jpg" alt="آمپلی‌فایر خودرو 9" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>آمپلی‌فایر خودرو 9</h3><p class="product-desc">تقویت صدای بی‌نظیر و عمیق</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="amplifier-10.jpg" alt="آمپلی‌فایر خودرو 10" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>آمپلی‌فایر خودرو 10</h3><p class="product-desc">عملکرد عالی با کمترین میزان نویز</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
+   <article class="product"><div class="product-img"><img src="amplifier-1.jpg" alt="آمپلی‌فایر خودرو 1" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>آمپلی‌فایر خودرو 1</h3><p class="product-desc">قدرت فوق‌العاده و کیفیت صدای استودیویی</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="amplifier-2.jpg" alt="آمپلی‌فایر خودرو 2" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>آمپلی‌فایر خودرو 2</h3><p class="product-desc">مناسب برای سیستم‌های پرقدرت بیس</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="amplifier-3.jpg" alt="آمپلی‌فایر خودرو 3" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>آمپلی‌فایر خودرو 3</h3><p class="product-desc">طراحی جمع و جور با راندمان بالا</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="amplifier-4.jpg" alt="آمپلی‌فایر خودرو 4" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>آمپلی‌فایر خودرو 4</h3><p class="product-desc">کیفیت ساخت بالا و صدای شفاف</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="amplifier-5.jpg" alt="آمپلی‌فایر خودرو 5" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>آمپلی‌فایر خودرو 5</h3><p class="product-desc">انتخاب حرفه‌ای‌ها برای سیستم صوتی</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="amplifier-6.jpg" alt="آمپلی‌فایر خودرو 6" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>آمپلی‌فایر خودرو 6</h3><p class="product-desc">قدرت پایدار و بدون افت کیفیت</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="amplifier-7.jpg" alt="آمپلی‌فایر خودرو 7" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>آمپلی‌فایر خودرو 7</h3><p class="product-desc">طراحی مدرن با بدنه آلومینیومی</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="amplifier-8.jpg" alt="آمپلی‌فایر خودرو 8" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>آمپلی‌فایر خودرو 8</h3><p class="product-desc">مناسب برای نصب در فضای محدود</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="amplifier-9.jpg" alt="آمپلی‌فایر خودرو 9" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>آمپلی‌فایر خودرو 9</h3><p class="product-desc">تقویت صدای بی‌نظیر و عمیق</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="amplifier-10.jpg" alt="آمپلی‌فایر خودرو 10" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>آمپلی‌فایر خودرو 10</h3><p class="product-desc">عملکرد عالی با کمترین میزان نویز</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
   </div></div>
 
-  <!-- میدرنج ها -->
   <div class="group" id="midranges"><div class="section-title"><h2>میدرنج‌ها</h2></div><div class="products">
-   <article class="product">
-    <div class="product-img"><img src="midrange-1.jpg" alt="میدرنج خودرو 1" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>میدرنج خودرو 1</h3><p class="product-desc">تفکیک صدای دقیق و شفافیت بالا</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="midrange-2.jpg" alt="میدرنج خودرو 2" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>میدرنج خودرو 2</h3><p class="product-desc">صدای زنده و پویا برای موسیقی</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="midrange-3.jpg" alt="میدرنج خودرو 3" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>میدرنج خودرو 3</h3><p class="product-desc">کیفیت ساخت عالی و عمر طولانی</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="midrange-4.jpg" alt="میدرنج خودرو 4" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>میدرنج خودرو 4</h3><p class="product-desc">مناسب برای سیستم‌های استاندارد</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="midrange-5.jpg" alt="میدرنج خودرو 5" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>میدرنج خودرو 5</h3><p class="product-desc">طراحی کلاسیک با صدای قدرتمند</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="midrange-6.jpg" alt="میدرنج خودرو 6" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>میدرنج خودرو 6</h3><p class="product-desc">عملکرد بدون اعوجاج در صدای بلند</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="midrange-7.jpg" alt="میدرنج خودرو 7" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>میدرنج خودرو 7</h3><p class="product-desc">وضوح صدای بالا حتی در حجم کم</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="midrange-8.jpg" alt="میدرنج خودرو 8" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>میدرنج خودرو 8</h3><p class="product-desc">بهترین انتخاب برای علاقه‌مندان به بیس</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="midrange-9.jpg" alt="میدرنج خودرو 9" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>میدرنج خودرو 9</h3><p class="product-desc">قدرت بالا و نصب آسان</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
+   <article class="product"><div class="product-img"><img src="midrange-1.jpg" alt="میدرنج خودرو 1" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>میدرنج خودرو 1</h3><p class="product-desc">تفکیک صدای دقیق و شفافیت بالا</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="midrange-2.jpg" alt="میدرنج خودرو 2" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>میدرنج خودرو 2</h3><p class="product-desc">صدای زنده و پویا برای موسیقی</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="midrange-3.jpg" alt="میدرنج خودرو 3" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>میدرنج خودرو 3</h3><p class="product-desc">کیفیت ساخت عالی و عمر طولانی</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="midrange-4.jpg" alt="میدرنج خودرو 4" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>میدرنج خودرو 4</h3><p class="product-desc">مناسب برای سیستم‌های استاندارد</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="midrange-5.jpg" alt="میدرنج خودرو 5" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>میدرنج خودرو 5</h3><p class="product-desc">طراحی کلاسیک با صدای قدرتمند</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="midrange-6.jpg" alt="میدرنج خودرو 6" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>میدرنج خودرو 6</h3><p class="product-desc">عملکرد بدون اعوجاج در صدای بلند</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="midrange-7.jpg" alt="میدرنج خودرو 7" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>میدرنج خودرو 7</h3><p class="product-desc">وضوح صدای بالا حتی در حجم کم</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="midrange-8.jpg" alt="میدرنج خودرو 8" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>میدرنج خودرو 8</h3><p class="product-desc">بهترین انتخاب برای علاقه‌مندان به بیس</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="midrange-9.jpg" alt="میدرنج خودرو 9" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>میدرنج خودرو 9</h3><p class="product-desc">قدرت بالا و نصب آسان</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
   </div></div>
 
-  <!-- پخش ها -->
   <div class="group" id="players"><div class="section-title"><h2>پخش‌های خودرو</h2></div><div class="products">
-   <article class="product">
-    <div class="product-img"><img src="player-1.jpg" alt="پخش خودرو 1" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>پخش خودرو 1</h3><p class="product-desc">پخش مالتی‌مدیا با پشتیبانی بلوتوث</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="player-2.jpg" alt="پخش خودرو 2" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>پخش خودرو 2</h3><p class="product-desc">کیفیت صدای عالی با خروجی‌های متنوع</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="player-3.jpg" alt="پخش خودرو 3" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>پخش خودرو 3</h3><p class="product-desc">نمایشگر بزرگ و رابط کاربری آسان</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
+   <article class="product"><div class="product-img"><img src="player-1.jpg" alt="پخش خودرو 1" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>پخش خودرو 1</h3><p class="product-desc">پخش مالتی‌مدیا با پشتیبانی بلوتوث</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="player-2.jpg" alt="پخش خودرو 2" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>پخش خودرو 2</h3><p class="product-desc">کیفیت صدای عالی با خروجی‌های متنوع</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="player-3.jpg" alt="پخش خودرو 3" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>پخش خودرو 3</h3><p class="product-desc">نمایشگر بزرگ و رابط کاربری آسان</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
   </div></div>
 
-  <!-- مانیتورها -->
   <div class="group" id="monitors"><div class="section-title"><h2>مانیتورهای خودرو</h2></div><div class="products">
-   <article class="product">
-    <div class="product-img"><img src="monitor-1.jpg" alt="مانیتور خودرو 1" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>مانیتور خودرو 1</h3><p class="product-desc">نمایشگر باکیفیت با لمس روان</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="monitor-2.jpg" alt="مانیتور خودرو 2" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>مانیتور خودرو 2</h3><p class="product-desc">سازگار با سیستم‌های اندروید و اپل</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
+   <article class="product"><div class="product-img"><img src="monitor-1.jpg" alt="مانیتور خودرو 1" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>مانیتور خودرو 1</h3><p class="product-desc">نمایشگر باکیفیت با لمس روان</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="monitor-2.jpg" alt="مانیتور خودرو 2" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>مانیتور خودرو 2</h3><p class="product-desc">سازگار با سیستم‌های اندروید و اپل</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
   </div></div>
 
-  <!-- ساب ووفرها -->
   <div class="group" id="subwoofers"><div class="section-title"><h2>ساب‌ووفرها</h2></div><div class="products">
-   <article class="product">
-    <div class="product-img"><img src="subwoofer-1.jpg" alt="ساب‌ووفر خودرو 1" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>ساب‌ووفر خودرو 1</h3><p class="product-desc">بیس قدرتمند و عمیق</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="subwoofer-2.jpg" alt="ساب‌ووفر خودرو 2" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>ساب‌ووفر خودرو 2</h3><p class="product-desc">صدای بم عالی برای موسیقی‌های هیجانی</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="subwoofer-3.jpg" alt="ساب‌ووفر خودرو 3" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>ساب‌ووفر خودرو 3</h3><p class="product-desc">ساختار مستحکم و تحمل توان بالا</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
-   <article class="product">
-    <div class="product-img"><img src="subwoofer-4.jpg" alt="ساب‌ووفر خودرو 4" loading="lazy"></div>
-    <div class="product-info">
-     <div class="product-name"><h3>ساب‌ووفر خودرو 4</h3><p class="product-desc">مناسب برای نصب در باکس‌های کوچک</p></div>
-     <a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a>
-    </div>
-   </article>
+   <article class="product"><div class="product-img"><img src="subwoofer-1.jpg" alt="ساب‌ووفر خودرو 1" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>ساب‌ووفر خودرو 1</h3><p class="product-desc">بیس قدرتمند و عمیق</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="subwoofer-2.jpg" alt="ساب‌ووفر خودرو 2" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>ساب‌ووفر خودرو 2</h3><p class="product-desc">صدای بم عالی برای موسیقی‌های هیجانی</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="subwoofer-3.jpg" alt="ساب‌ووفر خودرو 3" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>ساب‌ووفر خودرو 3</h3><p class="product-desc">ساختار مستحکم و تحمل توان بالا</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
+   <article class="product"><div class="product-img"><img src="subwoofer-4.jpg" alt="ساب‌ووفر خودرو 4" loading="lazy"></div><div class="product-info"><div class="product-name"><h3>ساب‌ووفر خودرو 4</h3><p class="product-desc">مناسب برای نصب در باکس‌های کوچک</p></div><a href="tel:09307974621" class="btn-order">استعلام قیمت / سفارش</a></div></article>
   </div></div>
-
  </div>
 </section>
 
-<!-- بخش درباره ما -->
+<!-- گالری نمونه نصب -->
+<section class="content" id="gallery" style="background:#f4f4f4;">
+ <div class="container">
+  <div class="section-title"><h2>گالری نمونه نصب‌ها</h2><p>افتخار ما، رضایت شماست</p></div>
+  <div class="products" style="grid-template-columns:repeat(3,minmax(0,1fr));">
+   <article class="product" style="padding:0; border:none; box-shadow:0 4px 15px #00000015;"><div class="product-img" style="height:240px; padding:0;"><img src="install-1.jpg" alt="نمونه نصب 1" loading="lazy"></div></article>
+   <article class="product" style="padding:0; border:none; box-shadow:0 4px 15px #00000015;"><div class="product-img" style="height:240px; padding:0;"><img src="install-2.jpg" alt="نمونه نصب 2" loading="lazy"></div></article>
+   <article class="product" style="padding:0; border:none; box-shadow:0 4px 15px #00000015;"><div class="product-img" style="height:240px; padding:0;"><img src="install-3.jpg" alt="نمونه نصب 3" loading="lazy"></div></article>
+  </div>
+ </div>
+</section>
+
+<!-- درباره ما -->
 <section class="content dark" id="about">
  <div class="container about">
   <div><div class="section-title"><h2>درباره RADIO KHAN</h2></div>
-   <p>رادیو خان، مرکز فروش و نصب سیستم‌های صوتی و تصویری خودرو در تبریز است.</p>
-   <p>برای اطلاع از موجودی محصولات، قیمت‌ها و خدمات نصب با فروشگاه در ارتباط باشید.</p>
+   <p>رادیو خان با سال‌ها تجربه در زمینه فروش و نصب تخصصی سیستم‌های صوتی و تصویری خودرو، آماده ارائه بهترین خدمات به شما عزیزان در تبریز است.</p>
+   <p>ما در رادیو خان فقط فروشنده نیستیم؛ ما به شما کمک می‌کنیم تا بهترین و باکیفیت‌ترین سیستم صوتی متناسب با خودرو و بودجه‌تان را انتخاب کنید. تیم فنی مجرب ما، نصب تمامی محصولات را با بالاترین استاندارد و دقت انجام می‌دهد تا لذت یک صدای بی‌نظیر را تجربه کنید.</p>
+   <p>خدمات ما شامل فروش انواع ساب‌ووفر، آمپلی‌فایر، میدرنج، پخش و مانیتور خودرو از برندهای معتبر جهانی و نصب حرفه‌ای آن‌هاست. برای مشاوره رایگان، همین حالا با ما تماس بگیرید.</p>
   </div>
   <div class="about-logo"><strong>RADIO KHAN</strong><span>CAR AUDIO SYSTEM</span></div>
  </div>
 </section>
 
-<!-- بخش تماس با ما -->
+<!-- تماس با ما -->
 <section class="content dark" id="contact">
  <div class="container">
   <div class="section-title"><h2>تماس با فروشگاه</h2></div>
@@ -396,9 +233,29 @@ footer p{font-size:12px;margin:0}
   </div>
  </div>
 </section>
+
+<!-- سوالات متداول -->
+<section class="content" id="faq" style="background:#fff;">
+ <div class="container">
+  <div class="section-title"><h2>سوالات متداول</h2></div>
+  <div style="max-width:800px; margin:auto;">
+   <details style="background:#f9f9f9; padding:15px; border-radius:8px; margin-bottom:10px; cursor:pointer; border:1px solid #eee;">
+    <summary style="font-weight:bold; font-size:15px; color:#111;">هزینه نصب سیستم صوتی چقدر است؟</summary>
+    <p style="margin-top:10px; font-size:13px; color:#555;">هزینه نصب بسته به نوع خودرو، تجهیزات و میزان سیم‌کشی متفاوت است. برای اطلاع دقیق از هزینه، لطفاً با شماره تماس فروشگاه در ارتباط باشید.</p>
+   </details>
+   <details style="background:#f9f9f9; padding:15px; border-radius:8px; margin-bottom:10px; cursor:pointer; border:1px solid #eee;">
+    <summary style="font-weight:bold; font-size:15px; color:#111;">آیا محصولات گارانتی دارند؟</summary>
+    <p style="margin-top:10px; font-size:13px; color:#555;">بله، تمامی محصولات فروشگاه دارای گارانتی معتبر شرکتی و اصالت کالا هستند.</p>
+   </details>
+   <details style="background:#f9f9f9; padding:15px; border-radius:8px; margin-bottom:10px; cursor:pointer; border:1px solid #eee;">
+    <summary style="font-weight:bold; font-size:15px; color:#111;">آیا برای خرید سیستم صوتی مشاوره هم می‌دهید؟</summary>
+    <p style="margin-top:10px; font-size:13px; color:#555;">بله، تیم فنی رادیو خان آماده است تا بر اساس نوع خودرو و سلیقه شما، بهترین ترکیب از ساب‌ووفر، آمپلی‌فایر و میدرنج را به شما پیشنهاد دهد.</p>
+   </details>
+  </div>
+ </div>
+</section>
 </main>
 
-<!-- فوتر (پایین سایت) -->
 <footer>
  <div class="container footer-inner">
   <a class="footer-logo" href="#home">RADIO KHAN</a>
@@ -407,8 +264,10 @@ footer p{font-size:12px;margin:0}
  </div>
 </footer>
 
-<!-- دکمه شناور تماس -->
 <a class="float-call" href="tel:09307974621" aria-label="تماس با فروشگاه">☎</a>
+<a class="float-wa" href="https://wa.me/989307974621" target="_blank" rel="noopener noreferrer" aria-label="تماس با واتساپ">
+<svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.264 8.264 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
+</a>
 
 <script>
 const menuBtn=document.getElementById('menuBtn');
@@ -425,4 +284,4 @@ navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
 }));
 </script>
 </body>
-</html>
+</html>                                                                                                                                                                                                                    
