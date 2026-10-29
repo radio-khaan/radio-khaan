@@ -16,22 +16,8 @@ img{max-width:100%;display:block}
 .container{width:min(1200px, 94%);margin-inline:auto}
 
 /* افکت دایره دنبال کننده موس */
-.cursor-glow {
-  position: fixed;
-  width: 25px;
-  height: 25px;
-  background: radial-gradient(circle, rgba(230,0,35,0.8) 0%, rgba(230,0,35,0) 70%);
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  transition: width 0.2s, height 0.2s;
-  mix-blend-mode: screen;
-}
-a:hover ~ .cursor-glow, button:hover ~ .cursor-glow {
-  width: 60px;
-  height: 60px;
-}
+.cursor-glow { position: fixed; width: 25px; height: 25px; background: radial-gradient(circle, rgba(230,0,35,0.8) 0%, rgba(230,0,35,0) 70%); border-radius: 50%; pointer-events: none; transform: translate(-50%, -50%); z-index: 9999; transition: width 0.2s, height 0.2s; mix-blend-mode: screen; }
+a:hover ~ .cursor-glow, button:hover ~ .cursor-glow { width: 60px; height: 60px; }
 
 /* هدر شیشه‌ای */
 header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);border-bottom:1px solid var(--border);transition:0.3s}
@@ -47,21 +33,8 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backd
 
 /* انیمیشن سینمایی هدر (Parallax) */
 .hero{background:linear-gradient(135deg, #1a1a1a, #000);color:#fff;padding:80px 0;position:relative;overflow:hidden}
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -20%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(230,0,35,0.15) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: pulseGlow 4s infinite alternate;
-}
-@keyframes pulseGlow {
-  0% { transform: scale(1); opacity: 0.5; }
-  100% { transform: scale(1.2); opacity: 1; }
-}
+.hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(230,0,35,0.15) 0%, transparent 70%); border-radius: 50%; animation: pulseGlow 4s infinite alternate; }
+@keyframes pulseGlow { 0% { transform: scale(1); opacity: 0.5; } 100% { transform: scale(1.2); opacity: 1; } }
 .hero-inner{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;position:relative;z-index:2}
 .hero h1{font-size:clamp(32px, 4.5vw, 55px);font-weight:900;line-height:1.4;margin-bottom:15px;text-shadow: 0 5px 15px rgba(0,0,0,0.5)}
 .hero h1 span{color:var(--red);text-shadow: 0 0 20px rgba(230,0,35,0.5)}
@@ -71,11 +44,7 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backd
 .btn.outline{background:transparent;border:1px solid #555;box-shadow:none}
 .btn.outline:hover{border-color:var(--red);color:var(--red);box-shadow:none}
 .hero-img img{width:100%;max-height:450px;object-fit:contain;filter:drop-shadow(0 15px 40px rgba(230,0,35,0.3));animation: floatImage 6s ease-in-out infinite}
-@keyframes floatImage {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0); }
-}
+@keyframes floatImage { 0% { transform: translateY(0); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0); } }
 
 /* بخش مزایا */
 .features{background:#fff;padding:25px 0;border-bottom:1px solid var(--border)}
@@ -160,7 +129,7 @@ footer .f-logo{font-size:20px;color:var(--red);font-weight:900;font-style:italic
  .hero-inner{grid-template-columns:1fr;text-align:center}
  .hero-img img{margin:auto}
  .search-box{display:none}
- .cursor-glow{display:none} /* در موبایل موس وجود ندارد */
+ .cursor-glow{display:none}
 }
 @media(max-width:650px){
  .products-grid{grid-template-columns:repeat(2,1fr);gap:10px}
@@ -257,74 +226,15 @@ footer .f-logo{font-size:20px;color:var(--red);font-weight:900;font-style:italic
    <a href="#">مشاهده همه ←</a>
   </div>
   <div class="products-grid">
+   
+   <!-- محصولات آمپلی فایر -->
    <div class="product-card reveal">
     <span class="badge">پرفروش</span>
     <button class="like-btn">♡</button>
-    <div class="product-img"><img src="subwoofer-1.jpg" alt="ساب ووفر"></div>
-    <div class="product-info">
-     <h3 class="product-title">ساب ووفر TT Technology</h3>
-     <p class="product-desc">صدای عمیق و باکیفیت برای سیستم پرقدرت</p>
-     <div class="product-footer">
-      <div class="price">تماس بگیرید</div>
-      <a href="tel:09307974621" class="btn-buy">🛒</a>
-     </div>
-    </div>
-   </div>
-   <div class="product-card reveal">
-    <button class="like-btn">♡</button>
     <div class="product-img"><img src="amplifier-1.jpg" alt="آمپلی فایر"></div>
     <div class="product-info">
-     <h3 class="product-title">آمپلی فایر Pioneer</h3>
+     <h3 class="product-title">آمپلی فایر خودرو ۱</h3>
      <p class="product-desc">قدرت فوق‌العاده و کیفیت صدای استودیویی</p>
-     <div class="product-footer">
-      <div class="price">تماس بگیرید</div>
-      <a href="tel:09307974621" class="btn-buy">🛒</a>
-     </div>
-    </div>
-   </div>
-   <div class="product-card reveal">
-    <span class="badge">جدید</span>
-    <button class="like-btn">♡</button>
-    <div class="product-img"><img src="player-1.jpg" alt="پخش خودرو"></div>
-    <div class="product-info">
-     <h3 class="product-title">پخش Pioneer DEH-X9600</h3>
-     <p class="product-desc">نمایشگر بزرگ و پشتیبانی از بلوتوث</p>
-     <div class="product-footer">
-      <div class="price">تماس بگیرید</div>
-      <a href="tel:09307974621" class="btn-buy">🛒</a>
-     </div>
-    </div>
-   </div>
-   <div class="product-card reveal">
-    <button class="like-btn">♡</button>
-    <div class="product-img"><img src="midrange-1.jpg" alt="میدرنج"></div>
-    <div class="product-info">
-     <h3 class="product-title">میدرنج TT Technology</h3>
-     <p class="product-desc">تفکیک صدای دقیق و شفافیت بالا</p>
-     <div class="product-footer">
-      <div class="price">تماس بگیرید</div>
-      <a href="tel:09307974621" class="btn-buy">🛒</a>
-     </div>
-    </div>
-   </div>
-   <div class="product-card reveal">
-    <button class="like-btn">♡</button>
-    <div class="product-img"><img src="monitor-1.jpg" alt="مانیتور"></div>
-    <div class="product-info">
-     <h3 class="product-title">مانیتور خودرو وگا</h3>
-     <p class="product-desc">سازگار با اندروید و اپل، لمس روان</p>
-     <div class="product-footer">
-      <div class="price">تماس بگیرید</div>
-      <a href="tel:09307974621" class="btn-buy">🛒</a>
-     </div>
-    </div>
-   </div>
-   <div class="product-card reveal">
-    <button class="like-btn">♡</button>
-    <div class="product-img"><img src="subwoofer-2.jpg" alt="ساب ووفر"></div>
-    <div class="product-info">
-     <h3 class="product-title">ساب ووفر Varsand</h3>
-     <p class="product-desc">بیس قدرتمند و ساختار مستحکم</p>
      <div class="product-footer">
       <div class="price">تماس بگیرید</div>
       <a href="tel:09307974621" class="btn-buy">🛒</a>
@@ -335,8 +245,46 @@ footer .f-logo{font-size:20px;color:var(--red);font-weight:900;font-style:italic
     <button class="like-btn">♡</button>
     <div class="product-img"><img src="amplifier-2.jpg" alt="آمپلی فایر"></div>
     <div class="product-info">
-     <h3 class="product-title">آمپلی فایر Alpine</h3>
-     <p class="product-desc">عملکرد پایدار و بدون افت کیفیت</p>
+     <h3 class="product-title">آمپلی فایر خودرو ۲</h3>
+     <p class="product-desc">مناسب برای سیستم‌های پرقدرت بیس</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="amplifier-3.jpg" alt="آمپلی فایر"></div>
+    <div class="product-info">
+     <h3 class="product-title">آمپلی فایر خودرو ۳</h3>
+     <p class="product-desc">طراحی جمع و جور با راندمان بالا</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="amplifier-4.jpg" alt="آمپلی فایر"></div>
+    <div class="product-info">
+     <h3 class="product-title">آمپلی فایر خودرو ۴</h3>
+     <p class="product-desc">کیفیت ساخت بالا و صدای شفاف</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+
+   <!-- محصولات میدرنج -->
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="midrange-1.jpg" alt="میدرنج"></div>
+    <div class="product-info">
+     <h3 class="product-title">میدرنج خودرو ۱</h3>
+     <p class="product-desc">تفکیک صدای دقیق و شفافیت بالا</p>
      <div class="product-footer">
       <div class="price">تماس بگیرید</div>
       <a href="tel:09307974621" class="btn-buy">🛒</a>
@@ -347,7 +295,7 @@ footer .f-logo{font-size:20px;color:var(--red);font-weight:900;font-style:italic
     <button class="like-btn">♡</button>
     <div class="product-img"><img src="midrange-2.jpg" alt="میدرنج"></div>
     <div class="product-info">
-     <h3 class="product-title">میدرنج Prime Sonic</h3>
+     <h3 class="product-title">میدرنج خودرو ۲</h3>
      <p class="product-desc">صدای زنده و پویا برای موسیقی</p>
      <div class="product-footer">
       <div class="price">تماس بگیرید</div>
@@ -355,6 +303,205 @@ footer .f-logo{font-size:20px;color:var(--red);font-weight:900;font-style:italic
      </div>
     </div>
    </div>
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="midrange-3.jpg" alt="میدرنج"></div>
+    <div class="product-info">
+     <h3 class="product-title">میدرنج خودرو ۳</h3>
+     <p class="product-desc">کیفیت ساخت عالی و عمر طولانی</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="midrange-4.jpg" alt="میدرنج"></div>
+    <div class="product-info">
+     <h3 class="product-title">میدرنج خودرو ۴</h3>
+     <p class="product-desc">مناسب برای سیستم‌های استاندارد</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="midrange-5.jpg" alt="میدرنج"></div>
+    <div class="product-info">
+     <h3 class="product-title">میدرنج خودرو ۵</h3>
+     <p class="product-desc">طراحی کلاسیک با صدای قدرتمند</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="midrange-6.jpg" alt="میدرنج"></div>
+    <div class="product-info">
+     <h3 class="product-title">میدرنج خودرو ۶</h3>
+     <p class="product-desc">عملکرد بدون اعوجاج در صدای بلند</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="midrange-7.jpg" alt="میدرنج"></div>
+    <div class="product-info">
+     <h3 class="product-title">میدرنج خودرو ۷</h3>
+     <p class="product-desc">وضوح صدای بالا حتی در حجم کم</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="midrange-8.jpg" alt="میدرنج"></div>
+    <div class="product-info">
+     <h3 class="product-title">میدرنج خودرو ۸</h3>
+     <p class="product-desc">بهترین انتخاب برای علاقه‌مندان به بیس</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="midrange-9.jpg" alt="میدرنج"></div>
+    <div class="product-info">
+     <h3 class="product-title">میدرنج خودرو ۹</h3>
+     <p class="product-desc">قدرت بالا و نصب آسان</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+
+   <!-- محصولات مانیتور -->
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="monitor-1.jpg" alt="مانیتور"></div>
+    <div class="product-info">
+     <h3 class="product-title">مانیتور خودرو ۱</h3>
+     <p class="product-desc">نمایشگر باکیفیت با لمس روان</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="monitor-2.jpg" alt="مانیتور"></div>
+    <div class="product-info">
+     <h3 class="product-title">مانیتور خودرو ۲</h3>
+     <p class="product-desc">سازگار با سیستم‌های اندروید و اپل</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+
+   <!-- محصولات پخش -->
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="player-1.jpg" alt="پخش خودرو"></div>
+    <div class="product-info">
+     <h3 class="product-title">پخش خودرو ۱</h3>
+     <p class="product-desc">پخش مالتی‌مدیا با پشتیبانی بلوتوث</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="player-2.jpg" alt="پخش خودرو"></div>
+    <div class="product-info">
+     <h3 class="product-title">پخش خودرو ۲</h3>
+     <p class="product-desc">کیفیت صدای عالی با خروجی‌های متنوع</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="player-3.jpg" alt="پخش خودرو"></div>
+    <div class="product-info">
+     <h3 class="product-title">پخش خودرو ۳</h3>
+     <p class="product-desc">نمایشگر بزرگ و رابط کاربری آسان</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+
+   <!-- محصولات ساب ووفر -->
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="subwoofer-1.jpg" alt="ساب ووفر"></div>
+    <div class="product-info">
+     <h3 class="product-title">ساب ووفر خودرو ۱</h3>
+     <p class="product-desc">بیس قدرتمند و عمیق</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="subwoofer-2.jpg" alt="ساب ووفر"></div>
+    <div class="product-info">
+     <h3 class="product-title">ساب ووفر خودرو ۲</h3>
+     <p class="product-desc">صدای بم عالی برای موسیقی‌های هیجانی</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="subwoofer-3.jpg" alt="ساب ووفر"></div>
+    <div class="product-info">
+     <h3 class="product-title">ساب ووفر خودرو ۳</h3>
+     <p class="product-desc">ساختار مستحکم و تحمل توان بالا</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+   <div class="product-card reveal">
+    <button class="like-btn">♡</button>
+    <div class="product-img"><img src="subwoofer-4.jpg" alt="ساب ووفر"></div>
+    <div class="product-info">
+     <h3 class="product-title">ساب ووفر خودرو ۴</h3>
+     <p class="product-desc">مناسب برای نصب در باکس‌های کوچک</p>
+     <div class="product-footer">
+      <div class="price">تماس بگیرید</div>
+      <a href="tel:09307974621" class="btn-buy">🛒</a>
+     </div>
+    </div>
+   </div>
+
   </div>
  </div>
 
