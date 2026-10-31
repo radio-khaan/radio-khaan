@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -375,3 +379,8 @@ window.addEventListener('click', (e) => {
 </script>
 </body>
                                                                                                                                                                                                                                                                                                                                                </html>
+document.querySelector('#loginModal .btn').addEventListener('click', function(e) {
+  e.preventDefault();
+  alert('ثبت‌نام / ورود شما با موفقیت انجام شد (این یک نسخه نمایشی است).');
+  loginModal.classList.remove('active');
+});
